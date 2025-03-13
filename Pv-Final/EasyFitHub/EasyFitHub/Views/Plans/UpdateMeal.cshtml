@@ -1,0 +1,122 @@
+﻿@model EasyFitHub.Models.Plan.PlanMeal
+@{
+    ViewData["Title"] = "MealEdit";
+}
+@*
+    Author: Rui Barroso
+    View destinada à modificação de um meal Plan
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/ItemEdit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="~/css/ImagePicker.css" />
+    <script src="~/js/ImagePicker.js"></script>
+    <script src="~/js/ItemEdit.js"></script>
+</head>
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Plan", "Plans", new { userId = Model.Plan.Client.UserId, planId = Model.PlanId })"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Edit Meal</p>
+    </div>
+}
+<body>
+    <p class="title bigger">@Model.Plan.Title  -  Meal</p>
+
+    <div class="content">
+        @if (Model != null)
+        {
+            <div>
+                <div id="viewDiv">
+                    <div class="itemImageContainer">
+                        <img id="profileImage" class="itemImage" alt="Item Image" src="/lib/imagens/DefaultMeal.png" />
+                    </div>
+
+                    <div class="button-container">
+                        <button class="button2" id="addBtn">Change Pick</button>
+                    </div>
+                </div>
+
+                <div id="formDiv" style="display:none">
+                    <div class="itemImageContainer">
+                        <img id="preview" class="itemImage" alt="Item Image" src="/lib/imagens/DefaultMeal.png" />
+                    </div>
+                    <br />
+                    <br />
+                    <form method="post" enctype="multipart/form-data" method="post" action="@Url.Action("UploadMealImage", "Plans")">
+                        <input type="hidden" name="mealId" value="@Model.PlanItemId" />
+                        <input type="hidden" name="userId" value="@Model.Plan.Client.UserId" />
+
+                        <div class="button-container">
+                            <label for="fileInput" class="button2">
+                                Pick File
+                            </label>
+                            <input type="file" name="file" id="fileInput" accept="image/*" onchange="previewImage(event)" />
+                        </div>
+                        <br />
+                        <br />
+                        <hr class="gray-hr">
+                        <br />
+                        <button class="button" type="submit">Apply</button>
+                        <br />
+                        <br />
+                        <button class="button" type="button" id="cancelBtn">Cancel</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="gray-hr">
+            <br />
+
+            <br />
+            <div class="items">
+                <form method="post" id="itemForm" action="@Url.Action("UpdateMeal", "Plans")">
+                    <input type="hidden" name="userId" value="@Model.Plan.Client.UserId" />
+                    <input asp-for="PlanId" type="hidden" value="@Model.PlanId" />
+                    <input asp-for="PlanItemId" type="hidden" value="@Model.PlanItemId" />
+                    <input asp-for="Name" type="text" placeholder="Name: @Model.Name" class="textBox" />
+                    @{
+                        var count = @Model.Description.Length;
+                        string size = double.Floor(count / 2.5) + "px";
+
+                        <textarea asp-for="Description" placeholder="Description" class="textArea" style="height:@size;"></textarea>
+                    }
+                    <br />
+                    <hr class="gray-hr">
+                    <br />
+                    <button class="button" type="submit">Apply</button>
+                </form>
+                <br />
+                <button class="button" onclick="cancelChanges()">Cancel</button>
+            </div>
+        }
+        else
+        {
+            <p>This item doesn't exist.</p>
+        }
+    </div>
+</body>
+
+@section Scripts {
+    @{
+        string? resultMessage = @TempData["ResultMessage"] as string;
+        <script>
+            var defaultSrc = "/lib/imagens/DefaultMeal.png";
+
+            var images = [];
+            var image = @Html.Raw(Json.Serialize(Model!.HubImage));
+
+
+            if (image) images.push(image);
+
+            function actionAlert() {
+                var message = @Html.Raw(Json.Serialize(resultMessage));
+
+                if (message) {
+                    alert(message);
+                }
+            }
+        </script>
+    }
+
+}

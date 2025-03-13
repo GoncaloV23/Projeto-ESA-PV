@@ -1,0 +1,22 @@
+﻿@*
+    Author: Gonçalo V.
+    View destinada à a visualização de um Item
+*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"] - EasyFitHub</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="navbar">
+        @RenderSection("Header", required: false)
+    </div>
+    <div class="restante-pagina"></div>
+    <div class="conteudo-pagina">
+        @RenderBody()
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

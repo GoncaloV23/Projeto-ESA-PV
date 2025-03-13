@@ -1,0 +1,87 @@
+﻿@model EasyFitHub.Models.Gym.Gym
+
+@{
+    ViewData["Title"] = "Index";
+}
+@*
+    Author:André P. / Francisco Silva
+    View destinada à visualização dos detalhes de um ginásio
+*@
+
+<head>
+    <link rel="stylesheet" href="~/css/sideBar.css" />
+    <link rel="stylesheet" href="~/css/slideShow.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <script src="~/js/Slider.js"></script>
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Authentication")"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Gym</p>
+    </div>
+}
+
+<body>
+    <div class="sidebar">
+        <a class="active" href="@Url.Action("Index", "Gyms")">@Model.Name</a>
+        <a href="@Url.Action("Clients", "Gyms", new {gymId = Model.Id})">Clients</a>
+        <a href="@Url.Action("Employees", "Gyms", new {gymId = Model.Id})">Employees</a>
+        <a href="@Url.Action("Relationships", "Gyms", new {gymId = Model.Id})">Relationships</a>
+
+        @if (ViewData["isMember"] != null && ViewData["isMember"] as bool? == true)
+        {
+            <a href="@Url.Action("ConfirmUnsubscription", "Payments", new {gymId = Model.Id})">Unroll</a>
+        }
+        else
+        {
+            <a href="@Url.Action("ConfirmSubscription", "Payments", new {gymId = Model.Id})">Enroll</a>
+        }
+        <a href="@Url.Action("Items", "Inventory", new {gymId = Model.Id})">Items</a>
+        <a href="@Url.Action("Machines", "Inventory", new {gymId = Model.Id})">Machines</a>
+        <a href="@Url.Action("GymStats", "Statistics", new {gymId = Model.Id})">Gym Statistics</a>
+    </div>
+    <div class="content">
+        <div class="form-box">
+            <div class="slideshow-container">
+                @if (Model.Images != null && Model.Images.Count > 0)
+                {
+                    <div class="slides">
+                        @foreach (var i in Model.Images)
+                        {
+                            <img src="@i.Path" alt="Imagens" class="slide">
+                        }
+                    </div>
+                    <div class="dots-container">
+                        @foreach (var i in Model.Images)
+                        {
+                            <span class="dot"></span>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <img src="/lib/imagens/GymDefault.jpg" alt="Imagens" class="slide">
+                    <span class="dot"></span>
+                }
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-box2">
+                <div class="conteudo">
+                    <h2>Gym's Description:</h2>
+                    <p>@Model.Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

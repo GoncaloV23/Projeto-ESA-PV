@@ -1,0 +1,142 @@
+@model EasyFitHub.Models.Plan.Plan
+
+@{
+    ViewData["Title"] = "Index";
+}
+@*
+    Author: Francisco Silva
+    View destinada à visualização de um Plan
+*@
+<head>
+    <link rel="stylesheet" href="~/css/Employees.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Plans", "Plans", new { userId = Model.Client.UserId, planType = Model.PlanType })"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Plan</p>
+    </div>
+}
+
+<body>
+    <div class="content">
+        @if (Model.PlanType == EasyFitHub.Models.Plan.PlanType.NUTRITION)
+        {
+            <h1>Meals</h1>
+
+        }
+        else
+        {
+            <h1>Exercises</h1>
+        }
+        <table>
+            <tbody>
+                @foreach (var planItem in Model.Items)
+                {
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <div class="user-image">
+                                    @if (planItem.GetImage() != null)
+                                    {
+                                        <img src="@planItem.GetImage().Path" />
+                                    }
+                                    else
+                                    {
+                                        @if (Model.PlanType == EasyFitHub.Models.Plan.PlanType.NUTRITION)
+                                        {
+                                            <img src="/lib/imagens/DefaultMeal.png" />
+                                        }
+                                        else
+                                        {
+                                            <img src="/lib/imagens/SliderV1.png" />
+                                        }
+                                    }
+                                </div>
+                                <div class="user-name">
+                                    <h2>@(planItem.Name)</h2>
+                                </div>
+                                <div class="user-email">
+                                    <h2>@(planItem.Description)</h2>
+                                </div>
+                                <div class="form2">
+                                    @if (Model.PlanType == EasyFitHub.Models.Plan.PlanType.NUTRITION)
+                                    {
+                                        <a href="@Url.Action("Meal", "Plans", new { mealId = planItem.PlanItemId, userId = Model.Client.UserId })"><button class="Button">View Meals</button></a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("Exercise", "Plans", new { userId = Model.Client.UserId, exerciseId = planItem.PlanItemId })"><button class="Button">View Exercise</button></a>
+                                    }
+                                </div>
+                                @if (Model.PlanType == EasyFitHub.Models.Plan.PlanType.NUTRITION)
+                                {
+                                    <div class="form2">
+                                    <form method="get" action="@Url.Action("UpdateMeal", "Plans")">
+                                        <input type="hidden" name="userId" value="@Model.Client.UserId" />
+                                        <input type="hidden" name="mealId" value="@planItem.PlanItemId" />
+                                        <button class="Button" id="removeBtn">Update</button>
+                                    </form>
+                                    </div>
+                                    <div class="form2">
+                                    <form method="post" action="@Url.Action("DeleteMeal", "Plans")">
+                                        <input type="hidden" name="userId" value="@planItem.Plan.Client.UserId" />
+                                        <input type="hidden" name="mealId" value="@planItem.PlanItemId" />
+                                        <button class="Button" id="removeBtn">Delete</button>
+                                    </form>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="form2">
+                                    <form method="get" action="@Url.Action("UpdateExercise", "Plans")">
+                                        <input type="hidden" name="userId" value="@Model.Client.UserId" />
+                                        <input type="hidden" name="exerciseId" value="@planItem.PlanItemId" />
+                                        <button class="Button" id="removeBtn">Update</button>
+                                    </form>
+                                    </div>
+                                    <div class="form2">
+                                    <form method="post" action="@Url.Action("DeleteExercise", "Plans")">
+                                        <input type="hidden" name="userId" value="@planItem.Plan.Client.UserId" />
+                                        <input type="hidden" name="exerciseId" value="@planItem.PlanItemId" />
+                                        <button class="Button" id="removeBtn">Delete</button>
+                                    </form>
+                                    </div>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    @if (Model.PlanType == EasyFitHub.Models.Plan.PlanType.NUTRITION)
+    {
+        <form method="get" action="@Url.Action("CreateMeal", "Plans")">
+            <input type="hidden" name="userId" value="@Model.Client.UserId" />
+            <input type="hidden" name="planId" value="@Model.PlanId" />
+            <button class="b" id="removeBtn">Create</button>
+        </form>
+    }
+    else
+    {
+        <form method="get" action="@Url.Action("CreateExercise", "Plans")">
+            <input type="hidden" name="userId" value="@Model.Client.UserId" />
+            <input type="hidden" name="planId" value="@Model.PlanId" />
+            <button class="b" id="removeBtn">Create</button>
+        </form>
+    }
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}
+
+

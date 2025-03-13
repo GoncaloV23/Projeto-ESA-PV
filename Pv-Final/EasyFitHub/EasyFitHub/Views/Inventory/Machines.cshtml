@@ -1,0 +1,79 @@
+﻿@using EasyFitHub.Models.Inventory
+@model List<GymMachine>
+@*
+    Author:André P.
+    View destinada à visuaização de maquinas
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Items.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <script src="~/js/Items.js"></script>
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Gyms", new {gymId = TempData["GymId"]})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Machines</p>
+    </div>
+}
+
+<body>
+    <div class="side-menu">
+        <br /><br />
+        <div class="lists">
+            <select class="dropdown-select" id="dropdownId" name="dropdownName" required>
+                <option value="" disabled selected hidden>Please select an option</option>
+                <option value="name">Name</option>
+                <option value="price">Quantity</option>
+            </select>
+        </div>
+        <br /><br />
+        <label class="checkbox-container">
+            <input type="checkbox" id="favoriteCheckbox" name="favoriteCheckbox">
+            &nbsp;Compare
+            <span class="checkmark"></span>
+        </label>
+        <br /><br />
+        <button class="button" onclick="applyFilters()">Apply</button>
+        <button class="button" onclick="clearFilters()">Clear</button>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="content">
+        @foreach (var item in Model)
+        {
+            <div class="items">
+                @if (item.Image != null && item.Image.Path != null)
+                {
+                    <img src="@item.Image.Path" style="width:100%;height:100%" />
+                }
+                else
+                {
+                    <img src="/lib/imagens/DefaultMachine.png" style="width:100%;height:100%" />
+                }
+                <h3>@item.Name</h3>
+                <p>@item.Description</p>
+                <p class="item-price">@item.Quantity Units</p>
+                <label>
+                    Compare
+                    <input type="checkbox" class="favorite-item" name="favoriteItems" value="@item.MachineId" />
+                </label>
+                <br /><br />
+                <i><a href="@Url.Action("Machine", "Inventory", new { gymId = TempData["GymId"], machineId = item.MachineId})" style="color: grey;">Details</a></i>
+            </div>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

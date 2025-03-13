@@ -1,0 +1,80 @@
+﻿@using EasyFitHub.Models.Gym
+@model List<Gym>
+@*
+    Author: Gonçalo V.
+    View destinada à confirmação de ginásios por parte de um Admin
+*@
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/ConfirmGyms.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <script src="~/js/Requests.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <span>Pending Requests</span>
+        <span class="space"><img src="/lib/imagens/ProfileV2.png" /></span>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    @if (Model != null)
+    {
+        <div class="table-container">
+            <table>
+                <tbody>
+                    @foreach (var gym in Model)
+                    {
+                        <tr>
+                            <td>
+                                <form method="post" action="@Url.Action("ConfirmGym", "Gyms")">
+                                <div class="gym-info">
+                                    <input type="hidden" name="gymId" value="@gym.Id" />
+                                    <div class="gym-image">
+                                        @if (gym.Images != null && gym.Images.FirstOrDefault() != null)
+                                        {
+                                            <img src="gym.Images.FirstOrDefault()" />
+                                        }
+                                        else
+                                        {
+                                            <img src="/lib/imagens/GymDefault.jpg" />
+                                        }
+                                    </div>
+                                    <div class="gym-name text">
+                                        @gym.Name
+                                    </div>
+                                    <div class="button-container">
+                                        <button type="submit" name="isConfirm" value="true" class="button">Accept</button>
+                                        <button type="submit" name="isConfirm" value="false" class="button">Deny</button>
+                                    </div>
+                                </div>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <p>No requests found.</p>
+    }
+
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}
+
+
+

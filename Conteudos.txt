@@ -1,0 +1,55 @@
+Conteudos
+- Orçamento
+	- Cliente 			- https://202100299.atlassian.net/l/cp/fCQZh9K7
+	- Interno 			- https://202100299.atlassian.net/l/cp/t3HBb2KY
+
+- Pv-Final
+	- Manual tecnico
+	- Manual Utilizador
+	- Codigo Fonte
+
+- Sprints
+	- Sprint 1
+		- Sprint planning 	- https://202100299.atlassian.net/l/cp/6x1k9JwH
+		- Desenho Detalhado 	- https://202100299.atlassian.net/l/cp/wZKRk7fY
+		- Retrospectiva 	- https://202100299.atlassian.net/l/cp/TgWjSX4T
+		- Review 		- https://202100299.atlassian.net/l/cp/g4WcH9H0
+		- Testes de aceitação 	- https://202100299.atlassian.net/l/cp/yW065R1W
+	- Sprint 2
+		- Sprint planning 	- https://202100299.atlassian.net/l/cp/h1XMnwk1
+		- Desenho Detalhado	- https://202100299.atlassian.net/l/cp/uY1wVPJ1
+		- Retrospectiva		- https://202100299.atlassian.net/l/cp/4J99c0br
+		- Review		- https://202100299.atlassian.net/l/cp/a1df4uKL
+		- Testes de aceitação	- https://202100299.atlassian.net/l/cp/xikVyXB1
+		- Testes de integração	- https://202100299.atlassian.net/l/cp/G0ofj3bw
+	- Sprint 3
+		- Sprint planning	- https://202100299.atlassian.net/l/cp/BJoKndVc
+		- Desenho Detalhado	- https://202100299.atlassian.net/l/cp/K0ddM5s8
+		- Retrospectiva		- https://202100299.atlassian.net/l/cp/JkwuBWsJ
+		- Review		- https://202100299.atlassian.net/l/cp/Su5wH6e8
+		- Testes de aceitação	- https://202100299.atlassian.net/l/cp/dZYbUp4k
+	- Sprint 4
+		- Sprint planning	- https://202100299.atlassian.net/l/cp/bbUoxKNn
+		- Desenho Detalhado	- https://202100299.atlassian.net/l/cp/BTnmTS2H
+		- Retrospectiva		- https://202100299.atlassian.net/l/cp/jo2xQGCj
+		- Review		- https://202100299.atlassian.net/l/cp/00Sv17to
+		- Testes de aceitação	- https://202100299.atlassian.net/l/cp/0S1yymFr
+	- Sprint 5
+		- Sprint planning 	- https://202100299.atlassian.net/l/cp/9SMpA1FP
+		- Retrospectiva 	- https://202100299.atlassian.net/l/cp/oT7f9Dtt
+
+- Videos
+	- Fio Condutor
+	- Demonstração
+
+- Análise de riscos 			- https://202100299.atlassian.net/l/cp/AqSh3mcq
+- Análise e especificação de requisitos - https://202100299.atlassian.net/l/cp/55E2271c
+- Desenho de Alto nivel 		- https://202100299.atlassian.net/l/cp/A01C6aBF
+- Encerramento de projeto 		- https://202100299.atlassian.net/l/cp/EA2mURdi
+- Pré-projeto 				- https://202100299.atlassian.net/l/cp/tEPL8PR4
+
+
+
+
+
+

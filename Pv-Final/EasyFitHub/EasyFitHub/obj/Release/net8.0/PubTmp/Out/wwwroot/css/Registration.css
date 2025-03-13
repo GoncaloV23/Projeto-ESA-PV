@@ -1,0 +1,114 @@
+body {
+    Background-image: url(/lib/imagens/Registo.PNG);
+    Background-size: cover;
+    Background-position: center;
+}
+
+.form-box {
+    width: 380px;
+    height: 800px;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    float: left;
+    margin-left: 100px;
+}
+
+
+.conteudo {
+    text-align: center;
+}
+
+    .conteudo h1 {
+        font-size: 28px;
+        margin-bottom: -20px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .conteudo h4 {
+        font-size: 18px;
+        margin-bottom: 35px;
+        font-family: 'Inter', sans-serif;
+    }
+
+.form-group {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-group2 {
+    margin-bottom: 20px;
+    float: left; /* Alinha o conteúdo à esquerda */
+    margin-left: 38px;
+    width: 75%; /* Define a largura da caixa de seleção */
+}
+
+    .form-group2 .form-control {
+        width: 51%; 
+        height: 50px;
+        padding: 0px 10px;
+        font-size: 16px;
+        border: 0px solid #ccc;
+        border-radius: 4px;
+        background-color: #D9D9D9;
+        color: #000000;
+    }
+
+
+.form-control {
+    width: 75%;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    background-color: #D9D9D9;
+    color: #000000;
+}
+
+.form-link {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-button {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.btn-primary {
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+    background-color: #FAA75C;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background-color: #F5B378;
+    }
+
+.navbar {
+    Background-image: url(/lib/imagens/LogoV2.PNG);
+    background-repeat: no-repeat;
+    background-size: 200px 40px;
+    background-position: 10px 5px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.field-validation-error {
+    color: red;
+    display: block;
+}
+
+    .field-validation-error::before {
+        content: "*";
+    }
+

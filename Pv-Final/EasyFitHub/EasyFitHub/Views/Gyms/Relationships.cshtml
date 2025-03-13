@@ -1,0 +1,92 @@
+﻿@using EasyFitHub.Models.Gym
+
+@model EasyFitHub.Models.Gym.Gym
+
+@{
+    ViewData["Title"] = "Relationships";
+}
+@*
+    Author: Gonçalo V.
+    View destinada à visualização de Relações entre Empregados e Clients
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Relationships.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Gyms", new {gymId = Model.Id})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Relationship</p>
+    </div>
+}
+
+<body>
+    <div class="corpo">
+        <form method="post" action="@Url.Action("RelationshipsGymEmployee", "Gyms")">
+            <input type="hidden" name="gymId" value="@Model.Id" />
+
+            <div class="form-group" id="allEmployeesDropdown">
+                <label for="allEmployees">Select Employee:</label>
+                <select class="dropdown-select" id="allEmployees" name="gymEmployeeId">
+                    <option value="" disabled selected hidden>Choose an option</option>
+                    @foreach (var employee in Model.GymEmployees)
+                    {
+                        <option value="@employee.GymEmployeeId">@employee.Client.User.UserName</option>
+                    }
+                </select>
+            </div>
+            <button type="submit" class="button">Confirm</button>
+        </form>
+        @if (ViewData["EmployeeClients"] != null)
+        {
+            <table>
+                <tbody>
+                        @foreach (var c in ViewData["EmployeeClients"] as IEnumerable<GymClient>)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <div class="user-image">
+                                            @if (c.Client.Data.Image != null)
+                                            {
+                                                <img src="@c.Client.Data.Image.Path" />
+                                            }
+                                            else
+                                            {
+                                                <img src="/lib/imagens/DefaultProfile.png" />
+                                            }
+                                        </div>
+                                        <div class="user-name">
+                                            <h2>@(c.Client.User.Name + " " + c.Client.User.Surname)</h2>
+                                        </div>
+                                        <div class="user-email">
+                                            <h2>@(c.Client.User.Email)</h2>
+                                        </div>
+                                        <div class="user-birthdate">
+                                            <h2>@(c.Client.User.BirthDate)</h2>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                </tbody>
+            </table>    
+        }
+        else
+        {
+            <p>No employee has been selected!</p>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

@@ -1,0 +1,89 @@
+﻿@using EasyFitHub.Models.Inventory
+@model GymMachine
+@{
+    ViewData["Title"] = "CreateMachine";
+}
+
+@*
+    Author:André P.
+    View destinada à criação de Máquinas
+*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/ItemEdit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="~/css/ImagePicker.css" />
+    <script src="~/js/ImagePicker.js"></script>
+    <script src="~/js/ItemEdit.js"></script>
+</head>
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Machines", "Inventory", new {gymId = TempData["GymId"]})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Create Machine</p>
+    </div>
+}
+<body>
+    <p class="title bigger">Machine</p>
+
+    <div class="content">
+        <div>
+            <div id="formDiv">
+                <div class="itemImageContainer">
+                    <img id="preview" class="itemImage" alt="Item Image" src="/lib/imagens/DefaultItem.png" />
+                </div>
+                <br />
+                <div class="button-container">
+                    <label for="fileInput" class="button2">
+                        Pick File
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <hr class="gray-hr">
+        <br />
+
+        <br />
+        <div class="items">
+            <form method="post" enctype="multipart/form-data" id="itemForm" action="@Url.Action("AddMachine", "Inventory")">
+                <input type="file" name="file" id="fileInput" accept="image/*" onchange="previewImage(event)" />
+                <input type="hidden" name="gymId" value="@TempData["GymId"]" />
+                <input asp-for="Name" type="text" placeholder="Name: " class="textBox" />
+                <textarea asp-for="Description" placeholder="Description:" class="textArea"></textarea>
+                <input asp-for="Quantity" type="number" placeholder="Quantity: " class="textBox" min="0" />
+                <br />
+                <hr class="gray-hr">
+                <br />
+                <button class="button" type="submit">Apply</button>
+            </form>
+            <br />
+            <button class="button" onclick="cancelChanges()">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @{
+        string? resultMessage = @TempData["ResultMessage"] as string;
+        <script>
+            var defaultSrc = "/lib/imagens/DefaultMachine.png";
+
+            var images = [];
+
+            function actionAlert() {
+                var message = @Html.Raw(Json.Serialize(resultMessage));
+
+                if (message) {
+                    alert(message);
+                }
+            }
+        </script>
+    }
+}

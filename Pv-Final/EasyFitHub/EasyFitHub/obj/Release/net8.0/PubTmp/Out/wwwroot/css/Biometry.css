@@ -1,0 +1,174 @@
+body {
+    background-color: #675E55;
+}
+
+.navbar {
+    height: 60px;
+}
+
+.nav-link.active {
+    color: #FAA75C;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    margin-top: 75px;
+    margin-right: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 50px;
+}
+
+.profile-details {
+    flex: 1;
+    margin-top: 50px;
+}
+
+.tool-image {
+    margin-top: -100px;
+    margin-right: -5px;
+    width: 65px;
+    height: 60px;
+}
+
+.id {
+    color: #FAA75C;
+    margin-bottom: -25px;
+    font-size: 15px;
+    font-family: 'Istok Web', sans-serif;
+    color: #FAA75C;
+}
+
+.name {
+    margin-bottom: -15px;
+    font-size: 22px;
+    font-family: 'Istok Web', sans-serif;
+    color: white;
+}
+
+.age {
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-family: 'Istok Web', sans-serif;
+    color: white;
+}
+
+.img2 {
+    width: 50px;
+    height: 45px;
+    margin-top: 5px;
+}
+
+.profile {
+    margin-right: 85%;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar-items {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    font-family: 'Istok Web', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    margin-top: 3%;
+}
+
+.form-control {
+    width: 25%;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    background-color: #D9D9D9;
+    color: #000000;
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.img3 {
+    width: 45px;
+    height: 45px;
+    float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-image {
+        width: 35%;
+        height: 35%;
+    }
+
+    .form-control {
+        width: 65%;
+        margin-left: 1%;
+    }
+
+    .age {
+        font-size: 100%;
+    }
+
+    .name {
+        font-size: 100%;
+    }
+
+    .id {
+        font-size: 75%;
+    }
+
+    .profile {
+        font-size: 100%;
+    }
+
+    .img2 {
+        width: 45px;
+        height: 40px;
+        margin-left: -20%;
+    }
+
+    .img3 {
+        width: 40px;
+        height: 40px;
+        margin-right: 180%;
+    }
+
+    .tool-image {
+        margin-top: 5%;
+        margin-right: 10%;
+        width: 45px;
+        height: 40px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .form-control {
+        width: 25%;
+        margin-left: 1%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .form-control {
+        width: 25%;
+        margin-left: 1%;
+    }
+}

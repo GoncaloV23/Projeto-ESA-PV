@@ -1,0 +1,180 @@
+﻿h1 {
+    margin-bottom: 70px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+}
+
+.gym-card {
+    display: inline-block;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.image {
+    width:  450px;
+    height: 300px;
+}
+
+
+.dropdown-select {
+    width: 200px;
+    height: 38px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .dropdown-select:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    /* arrow */
+    .dropdown-select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .dropdown-select option {
+        background-color: #fff;
+        color: #333;
+    }
+
+        .dropdown-select option:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+.button {
+    background-color: #FAA75C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    margin-left: 10px;
+}
+
+    .button:hover {
+        background-color: #F5B378;
+    }
+
+#searchInput, #subscribedLabel {
+    height: 19px;
+}
+
+#searchInput {
+    width: 200px; 
+}
+
+#subscribedLabel {
+    line-height: 38px;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+}
+
+.subscribed-label {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+#searchButton {
+    display: inline-block;
+}
+
+.content {
+    font-family: 'Istok Web', sans-serif;
+}
+
+.navbar2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.img2 {
+    width: 15%;
+    height: 15%;
+    margin-left: 10%;
+    margin-top: 3px;
+}
+
+.gymClients {
+    margin-left: -6%;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+

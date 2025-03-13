@@ -1,0 +1,115 @@
+﻿@using EasyFitHub.Models.Inventory
+@model List<Item>
+@*
+    Author: Gonçalo V.
+    View destinada à visualização de store items
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Items.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/Items.js"></script>
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Gyms", new { gymId = TempData["GymId"]})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Shop</p>
+    </div>
+}
+
+<body>
+    <div class="side-menu">
+        <br /><br />
+        <div class="lists">
+            <select class="dropdown-select" id="dropdownId" name="dropdownName" required>
+                <option value="" disabled selected hidden>Please select an option</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+            </select>
+        </div>
+        <br /><br />
+        <label class="checkbox-container">
+            <input type="checkbox" id="favoriteCheckbox" name="favoriteCheckbox">
+            &nbsp;Shopping Cart
+            <span class="checkmark"></span>
+        </label>
+        <br /><br />
+        <button class="button" onclick="applyFilters()">Apply</button>
+        <button class="button" onclick="clearFilters()">Clear</button>
+        <br /><br />
+        <button id="paymentBtn" type="button" onclick="sendCart()" class="button">Buy</button>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="content">
+        @foreach (var item in Model)
+        {
+            <div class="items">
+                @if (item.Image != null && item.Image.Path != null)
+                {
+                    <img src="@item.Image.Path" style="width:100%;height:100%" />
+                }
+                else
+                {
+                    <img src="/lib/imagens/DefaultItem.png" style="width:100%;height:100%" />
+                }
+                <h3>@item.Name</h3>
+                <p>@item.Description</p>
+                <p class="item-price">@item.Price €</p>
+                <label>
+                    Add ShoppingCart
+                    <input type="checkbox" class="favorite-item" name="favoriteItems" value="@item.ItemId" />
+                </label>
+                <br /><br />
+                <i><a href="@Url.Action("Item", "Inventory", new { gymId = TempData["GymId"], itemId = item.ItemId })" style="color: grey;">Details</a></i>
+            </div>
+        }''
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}
+
+@section Scripts {
+    <script>
+
+
+        function sendCart() {
+            // Obtém todos os elementos de seleção com a classe "favorite-item"
+            let checkboxes = document.querySelectorAll(".favorite-item:checked");
+
+            // Mapeia os valores dos itens selecionados para uma matriz
+            var list = Array.from(checkboxes).map(checkbox => checkbox.value);
+
+            // Envia os itens selecionados para o servidor
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                url: "@Url.Action("ConfirmPayment", "Payments")",
+                traditional: true,
+                data: {
+                    gymId: @TempData["GymId"],
+                    items: list
+                },
+                success: function (res) {
+                    console.log(res);
+                    window.location.href = res.redirectTo;
+                },
+                error: function (res) { console.log(res); }
+            });
+        }
+
+
+    </script>
+}

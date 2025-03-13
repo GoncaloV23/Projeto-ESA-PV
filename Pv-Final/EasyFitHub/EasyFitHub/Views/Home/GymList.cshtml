@@ -1,0 +1,83 @@
+﻿@using EasyFitHub.Models.Gym
+@model List<Gym>
+@*
+    Author: Gonçalo V.
+    View destinada à exploração de ginásios
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/GymList.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Authentication")"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">GymList</p>
+    </div>
+}
+
+<body>
+    <br />
+    <br />
+    <div class="content">
+        <div class="form-container">
+            <form method="get" asp-action="GymList" asp-controller="Home">
+                <label for="searchType">Search by:</label>
+                <select class="dropdown-select" id="searchType" name="searchType">
+                    <option value="name">Name</option>
+                    <option value="location">Location</option>
+                </select>
+                <input type="text" id="searchInput" name="search" class="dropdown-select" />
+                <label class="checkbox-container subscribed-label" id="subscribedLabel">
+                    <input type="checkbox" id="favoriteCheckbox" name="subscribed">
+                    <span class="checkmark"></span>
+                    Subscribed
+                </label>
+                <button type="submit" class="button" id="searchButton">Search</button>
+            </form>
+            <form method="get" asp-action="GymList" asp-controller="Home">
+                <button type="submit" class="button" name="searchType" value="clear">Clear</button>
+            </form>
+        </div>
+
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        @foreach (var gym in Model)
+        {
+        
+            <div class="gym-card">
+
+                <a href=@Url.Action("Index", "Gyms", new { gymId = gym.Id})>
+                @if (gym.Images != null && gym.Images.Any())
+                {
+                        <img src="@gym.Images.First().Path" style="width:450px;height:300px;" />
+                }
+                else
+                {
+                        <img class="image" src="/lib/imagens/GymDefault.jpg" style="width:450px;height:300px;" />
+                }
+                </a>
+                <h3>@gym.Name</h3>
+                <p>@gym.Description</p>
+                <p>Location: @gym.Location</p>
+                <p>Registration Date: @gym.RegisterDate.ToShortDateString()</p>
+
+            </div>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

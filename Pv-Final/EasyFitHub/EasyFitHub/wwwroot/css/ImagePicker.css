@@ -1,0 +1,40 @@
+﻿
+
+
+.ImagePicker {
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 25px;
+    margin-left: 40px;
+}
+.ImageGym {
+    max-width: 600px;
+    max-height: 400px;
+    min-width: 600px;
+    min-height: 400px;
+    border-radius: 25px;
+    margin-left: 40px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.fileInputBtn {
+    margin-top: 0.5%;
+    padding: 10px 20px;
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #FAA75C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fileInputBtn:hover {
+    background-color: #F5B378 !important;
+}

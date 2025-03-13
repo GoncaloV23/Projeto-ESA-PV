@@ -1,0 +1,521 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EasyFitHub.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EasyFitHub.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\AccountRecover.css",
+      "PackagePath": "staticwebassets\\css\\AccountRecover.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\BiometricSettings.css",
+      "PackagePath": "staticwebassets\\css\\BiometricSettings.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\Biometry.css",
+      "PackagePath": "staticwebassets\\css\\Biometry.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\ChangePassword.css",
+      "PackagePath": "staticwebassets\\css\\ChangePassword.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\Clients.css",
+      "PackagePath": "staticwebassets\\css\\Clients.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\ConfirmGyms.css",
+      "PackagePath": "staticwebassets\\css\\ConfirmGyms.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\EditRelationship.css",
+      "PackagePath": "staticwebassets\\css\\EditRelationship.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\Employees.css",
+      "PackagePath": "staticwebassets\\css\\Employees.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\ForgotPassword.css",
+      "PackagePath": "staticwebassets\\css\\ForgotPassword.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\Gym.css",
+      "PackagePath": "staticwebassets\\css\\Gym.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\GymList.css",
+      "PackagePath": "staticwebassets\\css\\GymList.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\GymSubscription.css",
+      "PackagePath": "staticwebassets\\css\\GymSubscription.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\ImagePicker.css",
+      "PackagePath": "staticwebassets\\css\\ImagePicker.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\ItemEdit.css",
+      "PackagePath": "staticwebassets\\css\\ItemEdit.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\Items.css",
+      "PackagePath": "staticwebassets\\css\\Items.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\LoginStyle.css",
+      "PackagePath": "staticwebassets\\css\\LoginStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\MainPage.css",
+      "PackagePath": "staticwebassets\\css\\MainPage.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\Profile.css",
+      "PackagePath": "staticwebassets\\css\\Profile.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\Registration.css",
+      "PackagePath": "staticwebassets\\css\\Registration.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\RegistrationGym.css",
+      "PackagePath": "staticwebassets\\css\\RegistrationGym.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\Relationships.css",
+      "PackagePath": "staticwebassets\\css\\Relationships.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\RelationshipsEdit.css",
+      "PackagePath": "staticwebassets\\css\\RelationshipsEdit.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\charts.css",
+      "PackagePath": "staticwebassets\\css\\charts.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\gallery.css",
+      "PackagePath": "staticwebassets\\css\\gallery.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\sideBar.css",
+      "PackagePath": "staticwebassets\\css\\sideBar.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\slideShow.css",
+      "PackagePath": "staticwebassets\\css\\slideShow.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\EditRelationship.js",
+      "PackagePath": "staticwebassets\\js\\EditRelationship.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\ImagePicker.js",
+      "PackagePath": "staticwebassets\\js\\ImagePicker.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\ItemEdit.js",
+      "PackagePath": "staticwebassets\\js\\ItemEdit.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\Items.js",
+      "PackagePath": "staticwebassets\\js\\Items.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\Payments.js",
+      "PackagePath": "staticwebassets\\js\\Payments.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\Profile.js",
+      "PackagePath": "staticwebassets\\js\\Profile.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\Requests.js",
+      "PackagePath": "staticwebassets\\js\\Requests.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\Slider.js",
+      "PackagePath": "staticwebassets\\js\\Slider.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\slideShow.js",
+      "PackagePath": "staticwebassets\\js\\slideShow.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\sort.js",
+      "PackagePath": "staticwebassets\\js\\sort.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\statisticGraphs.js",
+      "PackagePath": "staticwebassets\\js\\statisticGraphs.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\Arrow.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\Arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\DefaultGreyProfile.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\DefaultGreyProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\DefaultItem.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\DefaultItem.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\DefaultMachine.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\DefaultMachine.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\DefaultMeal.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\DefaultMeal.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\DefaultProfile.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\DefaultProfile.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\GymDefault.jpg",
+      "PackagePath": "staticwebassets\\lib\\imagens\\GymDefault.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\Home.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\Home.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\Icon2.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\Icon2.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\LoginImage.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\LoginImage.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\Logo.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\LogoPNG2.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\LogoPNG2.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\LogoPNG2.webp",
+      "PackagePath": "staticwebassets\\lib\\imagens\\LogoPNG2.webp"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\LogoV2.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\LogoV2.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\OrangeArrow.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\OrangeArrow.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\ProfileV2.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\ProfileV2.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\RecoverAccount.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\RecoverAccount.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\Registo.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\Registo.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\Settings.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\Settings.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\SliderV1.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\SliderV1.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\SliderV2.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\SliderV2.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\SliderV3.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\SliderV3.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\SliderV4.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\SliderV4.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\SliderV5.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\SliderV5.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\imagem4.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\imagem4.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\imagens\\plan.png",
+      "PackagePath": "staticwebassets\\lib\\imagens\\plan.png"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.EasyFitHub.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.EasyFitHub.props",
+      "PackagePath": "build\\EasyFitHub.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EasyFitHub.props",
+      "PackagePath": "buildMultiTargeting\\EasyFitHub.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.EasyFitHub.props",
+      "PackagePath": "buildTransitive\\EasyFitHub.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

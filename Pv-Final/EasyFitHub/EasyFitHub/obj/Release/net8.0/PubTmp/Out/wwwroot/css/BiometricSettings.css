@@ -1,0 +1,185 @@
+/*TOP NAVBAR*/
+.img2 {
+    width: 45px;
+    height: 35px;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.profile {
+    margin-left: 20px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 90%;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+}
+
+p.solid {
+    border: 1px solid black;
+    margin-right: 30%;
+}
+
+
+
+
+
+/*LEFT SIDEBAR*/
+.sidebar {
+    margin: 25px 0 0 -28px;
+    padding: 0;
+    width: 15%;
+    background-color: #4B433C;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.5s;
+    font-family: 'Istok Web', sans-serif;
+}
+
+    .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        font-family: 'Istok Web', sans-serif;
+        color: #ffffff;
+        border-bottom: 2px solid white;
+    }
+
+    .sidebar .active {
+        background-color: #FAA75C;
+        color: #ffffff;
+        width: 100%;
+    }
+
+    .sidebar a:hover:not(.active) {
+        background-color: #F5B378;
+        color: white;
+    }
+
+/*CONTENT*/
+.corpo {
+    padding-left: 15%;
+}
+
+.form-group * {
+    display: block;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.h1 {
+    margin-top: 4%;
+    font-family: 'Istok Web', sans-serif;
+    color: #000000;
+    font-size: 300%;
+    font-weight: 1000;
+}
+.line2 {
+    border-top: 2px solid #E0E0E0;
+    width: 101.5%;
+    margin-top: 2%;
+}
+
+.line3 {
+    border-top: 2px solid #E0E0E0;
+    width: 101.5%;
+    margin-top: 0.01%;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    margin-top: 2%;
+}
+
+.form-control {
+    width: 35%;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    background-color: #D9D9D9;
+    color: #000000;
+}
+
+.button2 {
+    margin-top: 0.9%;
+    margin-bottom: 1%;
+    width: 8%;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 93%;
+    background-color: #FAA75C !important;
+}
+
+    .button2:hover {
+        background-color: #F5B378 !important;
+    }
+
+.button3 {
+    margin-top: 1%;
+    width: 8%;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 93%;
+    background-color: #FAA75C !important;
+}
+
+    .button3:hover {
+        background-color: #F5B378 !important;
+    }
+
+label {
+    margin-top: 4%;
+    font-family: 'Istok Web', sans-serif;
+    color: #000000;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+
+
+
+/*Profile Edit*/
+.image1 {
+    width: 12%;
+    margin-top: 0%;
+}
+
+.button {
+    margin-top: 0.5%;
+    padding: 10px 20px;
+    margin-left: 1.8%;
+    width: 8%;
+    height: 2%;
+    background-color: #FAA75C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background-color: #F5B378 !important;
+    }

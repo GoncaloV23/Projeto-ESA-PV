@@ -1,0 +1,97 @@
+﻿@using EasyFitHub.Models.Account
+@model Manager
+@*
+    AUTHOR: Francisco Silva
+    View usada para criar uma nova conta Manager para a criaçao de um ginásio
+*@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="~/css/RegistrationGym.css" />
+</head>
+
+@{
+    ViewBag.Title = "Gym Registration";
+}
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="conteudo">
+                <h1>New Here?</h1>
+                <h4>Create a new gym account</h4>
+            </div>
+
+            @using (Html.BeginForm("RegisterGym", "Authentication", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <input asp-for="Email" class="form-control" placeholder="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="UserName" class="form-control" placeholder="User Name" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Gym.Name" class="form-control" placeholder="Name" />
+                    <span asp-validation-for="Gym.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Gym.Description" class="form-control" placeholder="Description" />
+                    <span asp-validation-for="Gym.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Gym.Location" class="form-control" placeholder="Location" />
+                    <span asp-validation-for="Gym.Location" class="text-danger"></span>
+                </div>
+
+                <div class="form-button">
+                    <button type="submit" class="btn btn-primary">Create Gym</button>
+                </div>
+            }
+
+            <div class="form-link">
+                <a href="@Url.Action("Index", "Authentication")" tabindex="4">I already have a gym</a><br />
+            </div>
+
+            <div class="form-link">
+                <a href="@Url.Action("Registration", "Authentication", new { accountType = "user" })" tabindex="4">Sign Up as a user</a><br />
+            </div>
+            <br/>
+        </div>
+    </div>
+</body>
+
+@* Include YAML messages
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script>
+        var messagesYAML = `
+                            en:
+                                required: "The {0} field is required."
+                            pt:
+                                required: "O campo {0} Ž obrigat—rio."
+                        `;
+        var messages = jsyaml.load(messagesYAML);
+        $.validator.messages = messages['@Html.Raw(System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.ToLower())'];
+    </script>
+}
+*@
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

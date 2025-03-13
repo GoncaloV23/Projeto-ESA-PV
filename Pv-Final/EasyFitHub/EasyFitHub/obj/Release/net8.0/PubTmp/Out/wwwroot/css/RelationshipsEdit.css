@@ -1,0 +1,139 @@
+﻿h1 {
+    margin-bottom: 70px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+}
+
+.dropdown-select {
+    width: 210px;
+    height: 38px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .dropdown-select:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    /* arrow */
+    .dropdown-select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .dropdown-select option {
+        background-color: #fff;
+        color: #333;
+    }
+
+        .dropdown-select option:hover {
+            background-color: #FAA75C;
+            color: #fff;
+        }
+
+.button {
+    background-color: #FAA75C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    margin-left: 10px;
+}
+
+    .button:hover {
+        background-color: #F5B378;
+    }
+
+#allClients, #currentClients {
+    width: 400px;
+    height: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+    #allClients:hover,
+    #allClients:focus,
+    #currentClients:hover,
+    #currentClients :focus {
+        border-color: #007bff;
+    }
+
+    #allClients option {
+        background-color: #fff;
+        color: #333;
+    }
+
+        #allClients option:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+.form-group label {
+    font-weight: bold; 
+    line-height: 38px; 
+}
+
+#clientActionGroup {
+    display: flex;
+    align-items: center; 
+}
+
+.client-tables {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+#allClientsDropdown,
+#currentClientsDropdown {
+    flex: 1; 
+    max-width: 45%; 
+    margin: 0 10px; 
+}
+
+.navbar2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.img2 {
+    width: 15%;
+    height: 2%;
+    margin-top: 3px;
+    margin-left: 5%;
+}
+
+.gymClients {
+    margin-left: -9%;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+

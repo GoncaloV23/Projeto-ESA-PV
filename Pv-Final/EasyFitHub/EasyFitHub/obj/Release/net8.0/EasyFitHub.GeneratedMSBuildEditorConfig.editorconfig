@@ -1,0 +1,271 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EasyFitHub
+build_property.RootNamespace = EasyFitHub
+build_property.ProjectDir = C:\Users\ruies\Documents\programacao\3ano\PV\EasyFitHub\EasyFitHub\EasyFitHub\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ruies\Documents\programacao\3ano\PV\EasyFitHub\EasyFitHub\EasyFitHub
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Authentication/AccountRecover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cQWNjb3VudFJlY292ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Authentication/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Authentication/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Authentication/GymRegistration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cR3ltUmVnaXN0cmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Authentication/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Authentication/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cUmVnaXN0cmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/Clients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xDbGllbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/ClientsEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xDbGllbnRzRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/ConfirmGyms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xDb25maXJtR3ltcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/DeleteGyms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xEZWxldGVHeW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/Employees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xFbXBsb3llZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/EmployeesEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xFbXBsb3llZXNFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/Relationships.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xSZWxhdGlvbnNoaXBzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/RelationshipsEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xSZWxhdGlvbnNoaXBzRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/Requests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Gyms/RequestsEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltc1xSZXF1ZXN0c0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Home/GymList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHeW1MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/CreateExercise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XENyZWF0ZUV4ZXJjaXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/CreateItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XENyZWF0ZUl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/CreateMachine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XENyZWF0ZU1hY2hpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/Exercise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEV4ZXJjaXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/Item.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/ItemEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEl0ZW1FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/Items.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEl0ZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/ItemsEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEl0ZW1zRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/Machine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XE1hY2hpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/MachineEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XE1hY2hpbmVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/Machines.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XE1hY2hpbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/MachinesEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XE1hY2hpbmVzRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Inventory/UpdateExercise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XFVwZGF0ZUV4ZXJjaXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Payments/GymSubscription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcR3ltU3Vic2NyaXB0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Payments/PaymentMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcUGF5bWVudE1ldGhvZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Payments/SubscriptionPlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcU3Vic2NyaXB0aW9uUGxhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/CreateExercise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcQ3JlYXRlRXhlcmNpc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/CreateMeal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcQ3JlYXRlTWVhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/CreatePlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcQ3JlYXRlUGxhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/Exercise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcRXhlcmNpc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/Meal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcTWVhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/Plan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcUGxhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/Plans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcUGxhbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/UpdateExercise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcVXBkYXRlRXhlcmNpc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/UpdateMeal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcVXBkYXRlTWVhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Plans/UpdatePlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnNcVXBkYXRlUGxhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Profile/Biometrics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxCaW9tZXRyaWNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Profile/BiometricsEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxCaW9tZXRyaWNzRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Profile/ProfileEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxQcm9maWxlRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Shared/NotAuthorized.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEF1dGhvcml6ZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Statistics/ClientStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xDbGllbnRTdGF0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Statistics/EmployeeStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xFbXBsb3llZVN0YXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Statistics/GymStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xHeW1TdGF0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Statistics/PlatformStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xQbGF0Zm9ybVN0YXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ruies/Documents/programacao/3ano/PV/EasyFitHub/EasyFitHub/EasyFitHub/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xi065fbpaq

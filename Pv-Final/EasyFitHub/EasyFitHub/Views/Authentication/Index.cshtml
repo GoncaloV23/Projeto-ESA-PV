@@ -1,0 +1,73 @@
+﻿@using EasyFitHub.Models.Account
+@model Account
+@*
+AUTHOR: Francisco Silva
+Página de autenticação 
+*@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="~/css/LoginStyle.css" />
+</head>
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="conteudo">
+                <h1>Welcome Back</h1>
+                <h4>Login into your account</h4>
+            </div>
+
+            @using (Html.BeginForm("Login", "Authentication", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    @Html.TextBox("UserName", null, new { @class = "form-control", placeholder = "User Name" })
+                </div>
+
+                <div class="form-group">
+                    @Html.Password("PassWord", null, new { @class = "form-control", placeholder = "Password" })
+                </div>
+
+                <div class="form-button">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            }
+
+            <div class="form-link">
+                <a href="@Url.Action("AccountRecover", "Authentication")" tabindex="4">Recover Password</a><br/>
+            </div>
+            <div class="form-link">
+                <a href="@Url.Action("Registration", "Authentication", new { accountType = "user" })">Sign up</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+@* Include YAML messages *@
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script>
+        var messagesYAML = `
+                    en:
+                        required: "The {0} field is required."
+                    pt:
+                        required: "O campo {0} é obrigatório."
+                `;
+        var messages = jsyaml.load(messagesYAML);
+        $.validator.messages = messages['@Html.Raw(System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.ToLower())'];
+    </script>
+}
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

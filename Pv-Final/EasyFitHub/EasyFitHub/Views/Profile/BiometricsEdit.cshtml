@@ -1,0 +1,104 @@
+@model EasyFitHub.Models.Profile.Client
+@*
+    Author: Francisco Silva
+    View destinada à edição de Biométricas
+*@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="~/css/BiometricSettings.css" />
+    <script src="Profile.js"></script>
+</head>
+@{
+    ViewData["Title"] = "BiometricsEdit";
+}
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Biometrics", "Profile", new { userId = Model.UserId })"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="profile">BiometricSettings</p>
+    </div>
+}
+<body>
+    <div class="sidebar">
+        <a id="profileButton" class="active">Biometry Settings</a>
+    </div>
+    <div id="profileSection" class="corpo">
+        <h1 class="h1">BiometryData Settings</h1>
+        @using (Html.BeginForm("UpdateClient", "Profile", FormMethod.Post))
+        {
+            <input type="hidden" asp-for=UserId value="@Model.UserId" />
+            <input type="hidden" asp-for=ClientId value="@Model.ClientId" />
+            
+
+            <br />
+            <div class="form-group">
+                <label asp-for="Biometrics.Weigth" class="control-label"></label>
+                <input asp-for="Biometrics.Weigth" class="form-control" type="number" step="0.1" min="0" max="700" />
+                <span asp-validation-for="Biometrics.Weigth" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Biometrics.Height" class="control-label"></label>
+                <input asp-for="Biometrics.Height" class="form-control" type="number" step="0.01" min="0" max="3" />
+                <span asp-validation-for="Biometrics.Height" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Biometrics.WaterPercentage" class="control-label"></label>
+                <input asp-for="Biometrics.WaterPercentage" class="form-control" type="number" step="0.1" min="0" max="100" />
+                <span asp-validation-for="Biometrics.WaterPercentage" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Biometrics.FatMass" class="control-label"></label>
+                <input asp-for="Biometrics.FatMass" class="form-control" type="number" step="0.1" min="0" max="100" />
+                <span asp-validation-for="Biometrics.FatMass" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Biometrics.LeanMass" class="control-label"></label>
+                <input asp-for="Biometrics.LeanMass" class="form-control" type="number" step="0.1" min="0" max="100" />
+                <span asp-validation-for="Biometrics.LeanMass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Biometrics.BodyMassIndex" class="control-label"></label>
+                <input asp-for="Biometrics.BodyMassIndex" class="form-control" type="number" step="0.1" min="0" max="100" />
+                <span asp-validation-for="Biometrics.BodyMassIndex" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Biometrics.MetabolicAge" class="control-label"></label>
+                <input asp-for="Biometrics.MetabolicAge" class="form-control" type="number" step="1" min="0" max="120" />
+                <span asp-validation-for="Biometrics.MetabolicAge" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Biometrics.VisceralFat" class="control-label"></label>
+                <input asp-for="Biometrics.VisceralFat" class="form-control" type="number" step="0.1" min="0" max="100" />
+                <span asp-validation-for="Biometrics.VisceralFat" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+
+                <div class="line2"></div>
+                <input type="submit" value="Apply" class="button2" />
+                <div class="line3"></div>
+                <div class="profile-section3">
+                    <div class="button-container2">
+                        <button class="button3">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

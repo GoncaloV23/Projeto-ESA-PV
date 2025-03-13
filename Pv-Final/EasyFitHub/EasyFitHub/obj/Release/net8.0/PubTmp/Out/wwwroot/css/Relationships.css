@@ -1,0 +1,172 @@
+﻿.corpo{
+    margin-top: 5%;
+}
+
+
+h1 {
+    margin-bottom: 70px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+}
+
+.dropdown-select {
+    width: 200px;
+    height: 38px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .dropdown-select:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    /* arrow */
+    .dropdown-select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .dropdown-select option {
+        background-color: #fff;
+        color: #333;
+    }
+
+        .dropdown-select option:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+.form-group label {
+    font-weight: bold;
+    line-height: 38px;
+}
+
+.button {
+    background-color: #FAA75C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+    .button:hover {
+        background-color: #F5B378;
+    }
+
+
+h1 {
+    margin-bottom: 5%;
+    padding-top: 2%;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+}
+
+td {
+    vertical-align: middle;
+}
+.navbar {
+    background-repeat: no-repeat;
+    background-size: 35px 23px;
+    background-position: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+    .navbar span {
+        margin-right: 20px;
+        padding-left: 50px;
+        font-family: 'Istok Web', sans-serif;
+    }
+
+    .navbar img {
+        width: 35px;
+        height: 35px;
+        margin-top: 5px;
+        margin-right: -5px;
+    }
+
+
+
+td {
+    vertical-align: middle;
+    border-bottom: 2px solid #E0E0E0;
+    width: auto;
+}
+
+
+table {
+    width: 100%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+.user-name {
+    margin-left: 10px;
+}
+
+.user-email {
+    margin-left: 70px;
+}
+
+.user-birthdate {
+    margin-left: 70px;
+}
+
+.content {
+    font-family: 'Istok Web', sans-serif;
+}
+
+
+.navbar2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.img2 {
+    width: 15%;
+    height: 1%;
+    margin-left: 20%;
+    margin-top: 3px;
+    padding-left: 10%;
+}
+
+.gymClients {
+    margin-left: 20px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 1%;
+}
+

@@ -1,0 +1,101 @@
+﻿@using EasyFitHub.Models.Statistics
+@model List<EasyFitHub.Models.Statistics.ClientStats>
+@*
+    Author: André P.
+    View destinada à visualização de estatísticas de um cliente
+*@
+@{
+    ViewData["Title"] = "Client Statistics";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/sideBar.css" />
+    <link rel="stylesheet" href="~/css/slideShow.css" />
+    <link rel="stylesheet" href="~/css/charts.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="~/js/statisticGraphs.js"></script>
+
+
+</head>
+
+@section Header {
+    <div class="navbar2">
+        @if (Model.Count <= 0)
+        {
+            <a href="@Url.Action("Index", "Home")"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        }
+        else
+        {
+            <a href="@Url.Action("Index", "Profile", new {userId = Model.FirstOrDefault().Client.UserId})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        }
+        <p class="gymClients">Client Statistics</p>
+    </div>
+}
+
+<body>
+    @if (Model.Count > 0)
+    {
+        <div class="sidebar">
+            <a class="active">@Model.First().Client.User.Name Statistics</a>
+        </div>
+        <div class="content">
+            <div class="chart-container">
+
+                <canvas id="weigth">        </canvas>
+                <canvas id="height">        </canvas>
+                <canvas id="fatMass">       </canvas>
+                <canvas id="leanMass">      </canvas>
+                <canvas id="bodyMassIndex"> </canvas>
+                <canvas id="visceralFat">   </canvas>
+
+            </div>
+            <br />
+        </div>
+    }
+    else
+    {
+        <div class="sidebar">
+            <a class="active">No Client</a>
+        </div>
+        <div class="content">
+            <div class="chart-container">
+                <h1>There Is No Statistics</h1>
+            </div>
+            <br />
+        </div>
+    }
+</body>
+
+<script>
+    var message = @Json.Serialize(@TempData["ResultMessage"]);
+    var stats = [];
+    if (@Model.Count > 0) {
+        stats = @Json.Serialize(@Model);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (message) {
+            alert(message);
+        }
+
+
+
+        if (stats.length > 0) {
+            orderAscByDate(stats);
+            console.log(stats);
+
+
+            loadLineChartByField("weigth", "Weigth", "weigth")
+            loadLineChartByField("height", "Height", "height")
+            loadLineChartByField("fatMass", "Fat Mass", "fatMass")
+            loadLineChartByField("leanMass", "Lean Mass", "leanMass")
+            loadLineChartByField("bodyMassIndex", "Body Mass Index", "bodyMassIndex")
+            loadLineChartByField("visceralFat", "Visceral Fat", "visceralFat")
+        }
+    });
+
+
+</script>

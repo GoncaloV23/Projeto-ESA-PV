@@ -1,0 +1,31 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #211E1E;
+    color: white;
+    display: flex;
+    border-bottom: 5px solid #FAA75C;
+    z-index: 1000;
+}
+
+.restante-pagina {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/lib/images/gym.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.conteudo-pagina {
+    padding: 20px;
+    color: black;
+    margin-bottom: 50px;
+}

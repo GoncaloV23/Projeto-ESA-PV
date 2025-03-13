@@ -1,0 +1,108 @@
+@model List<EasyFitHub.Models.Plan.Plan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@*
+    Author: Francisco Silva
+    View destinada à visualização de Plans
+*@
+<head>
+    <link rel="stylesheet" href="~/css/Employees.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Plans", new { userId = ViewData["UserId"] })"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Plans</p>
+    </div>
+}
+
+<body>
+    <div class="content">
+        @if (ViewData["PlanType"] != null && ViewData["PlanType"] as EasyFitHub.Models.Plan.PlanType? == EasyFitHub.Models.Plan.PlanType.NUTRITION)
+        {
+            <h1>Meal Plans</h1>
+
+        }
+        else
+        {
+            <h1>Exercise Plans</h1>
+        }
+        <table>
+            <tbody>
+                @foreach (var plan in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <div class="user-image">
+                                    @if (plan.HubImage != null)
+                                    {
+                                        <img src="@plan.HubImage.Path" />
+                                    }
+                                    else
+                                    {
+                                        <img src="/lib/imagens/plan.png"  />
+                                        
+                                    }
+                                </div>
+                                <div class="user-name">
+                                    <h2>@(plan.Title)</h2>
+                                </div>
+                                <div class="user-email">
+                                    <h2>@(plan.Description)</h2>
+                                </div>
+                                <div class="form2">
+                                    @if (ViewData["PlanType"] != null && ViewData["PlanType"] as EasyFitHub.Models.Plan.PlanType? == EasyFitHub.Models.Plan.PlanType.NUTRITION)
+                                    {
+                                        <a href="@Url.Action("Plan", "Plans", new { planId = plan.PlanId, userId = ViewData["UserId"] })"><button class="Button">View Plan</button></a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("Plan", "Plans", new { planId = plan.PlanId, userId = ViewData["UserId"] })"><button class="Button">View Plan</button></a>
+                                    }
+                                </div>
+                                <div class="form2">
+                                    <form method="get" action="@Url.Action("UpdatePlan", "Plans")">
+                                        <input type="hidden" name="userId" value="@plan.Client.UserId" />
+                                        <input type="hidden" name="planId" value="@plan.PlanId" />
+                                        <button class="Button" id="removeBtn">Update</button>
+                                    </form>
+                                </div>
+                                <div class="form2">
+                                    <form method="post" action="@Url.Action("DeletePlan", "Plans")">
+                                        <input type="hidden" name="userId" value="@plan.Client.UserId" />
+                                        <input type="hidden" name="planId" value="@plan.PlanId" />
+                                        <input type="hidden" name="planType" value="@plan.PlanType" />
+                                        <button class="Button" id="removeBtn">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <form method="get" action="@Url.Action("CreatePlan", "Plans")">
+            <input type="hidden" name="userId" value="@ViewData["UserId"]" />
+            <input type="hidden" name="planType" value="@ViewData["PlanType"]" />
+            <button class="b" id="removeBtn">Create</button>
+        </form>
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}
+
+

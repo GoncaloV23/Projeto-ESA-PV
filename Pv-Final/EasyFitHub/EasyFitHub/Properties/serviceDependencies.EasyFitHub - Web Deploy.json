@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "ignored": "true",
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:AzureConnection"
+    },
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/EasyFitHub/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsEasyFitHubContext_78D64712F7",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/easyfithubdbserver/databases/EasyFitHubAzure",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:EasyFitHubContext"
+    }
+  }
+}

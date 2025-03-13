@@ -1,0 +1,118 @@
+.navbar{
+    height: 60px;
+}
+
+.nav-link.active {
+    color: #FAA75C; /* Cor diferente para a opção selecionada */
+}
+
+body {
+    Background-image: url(/lib/imagens/LoginImage.PNG);
+    Background-position: center;
+    background-size: cover;
+}
+
+.img2 {
+    width: 200px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.img3 {
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar3 {
+    flex-shrink: 0; 
+    margin-left: 10%;
+}
+
+
+.navbar-items {
+    margin-top: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+    .navbar-items li {
+        display: inline;
+        padding: 40px;
+    }
+
+        .navbar-items li:last-child {
+            margin-right: 0;
+        }
+
+        .navbar-items li a {
+            color: white;
+            text-decoration: none;
+        }
+
+.img1 {
+    width: 400px;
+    height: 75px;
+    margin-top: -25px;
+}
+
+.btn-primary {
+    width: 13%;
+    height: 50px;
+    font-size: 16px;
+    background-color: #FAA75C;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+    .btn-primary:hover {
+        background-color: #F5B378;
+    }
+
+.display-4 {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin-top: 130px;
+    margin-left: 7px;
+    font-weight: 100;
+}
+
+.display-5 {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin-top: 15px;
+    margin-left: 7px;
+    font-weight: 100;
+}
+
+.display-6 {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin-top: -30px;
+    margin-left: 7px;
+    font-weight: 100;
+}
+
+logoutForm {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,104 @@
+﻿@using EasyFitHub.Models.Statistics
+@model List<EasyFitHub.Models.Statistics.PlatformStats>
+@*
+    Author: André P.
+    View destinada à visualização de estatísticas do EasyFitHub
+*@
+@{
+    ViewData["Title"] = "Platform Statistics";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/sideBar.css" />
+    <link rel="stylesheet" href="~/css/slideShow.css" />
+    <link rel="stylesheet" href="~/css/charts.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="~/js/statisticGraphs.js"></script>
+
+
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Home")"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Platform Stats</p>
+    </div>
+}
+
+<body>
+    <div class="sidebar">
+        <a class="active">Platform Statistics</a>
+
+        @foreach (var x in Model)
+        {
+            <a onclick='menuClick(@x.PlatFormStatsId)'>Statistics of @(DateOnly.FromDateTime(x.TheDate))</a>
+
+        }
+    </div>
+    <div class="content">
+        <div class="chart-container">
+            @if (Model.Count > 0)
+            {
+                <canvas id="gymCount"></canvas>
+                <canvas id="userCount"></canvas>
+                <canvas id="avgAge"></canvas>
+
+                <div class="graph">
+                    <canvas id="sexRates"></canvas>
+                </div>
+
+                <canvas id="topGyms"></canvas>
+            }
+            else
+            {
+                <h1>There Is No Statistics</h1>
+            }
+        </div>
+        <br />
+
+    </div>
+</body>
+
+<script>
+    var message = @Json.Serialize(@TempData["ResultMessage"]);
+    var stats = [];
+    if (@Model.Count > 0) {
+        stats = @Json.Serialize(@Model);
+    }
+
+    function menuClick(statId) {
+        let index = stats.findIndex(e => {
+            return e.platFormStatsId == statId;
+        });
+        if (index >= 0 && index < stats.length) {
+            loadSexRates("sexRates", "Sex Rates", index);
+            loadTopGyms("topGyms", "Gym User Count", index);
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+
+        if (message) {
+            alert(message);
+        }
+
+
+
+        if (stats.length > 0) {
+            orderAscByDate(stats);
+            console.log(stats);
+
+            loadGymCount("gymCount", "Number of Gyms");
+
+            loadUserCount("userCount", "Number of User Account");
+
+            loadAvgAge("avgAge", "Average Age of the Users");
+
+            loadSexRates("sexRates", "Sex Rates", 0);
+
+            loadTopGyms("topGyms", "Gym User Count", 0);
+        }
+    });
+</script>

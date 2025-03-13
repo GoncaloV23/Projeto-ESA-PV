@@ -1,0 +1,72 @@
+﻿@using EasyFitHub.Models.Inventory
+@model Item
+@{
+    ViewData["Title"] = "Item";
+}
+@*
+    Author: Gonçalo V.
+    View destinada à a visualização de um Item
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/ItemEdit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <script src="~/js/Items.js"></script>
+</head>
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Items", "Inventory", new {gymId = TempData["GymId"]})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Item</p>
+    </div>
+}
+<body>
+    <p class="title bigger">Item</p>
+
+    <div class="content">
+        @if (Model != null)
+        {
+            @if (Model.Image != null && Model.Image.Path != null)
+            {
+                <img class="itemImage" src="@Model.Image.Path" />
+            }
+            else
+            {
+                <img class="itemImage" src="/lib/imagens/DefaultItem.png" />
+            }
+            <hr class="gray-hr">
+            <br />
+
+            <br />
+            <div class="items">
+                <input type="hidden" name="gymId" value="@Model.GymId" />
+                <input type="hidden" name="itemId" value="@Model.ItemId" />
+                <input readonly="readonly" type="text" placeholder="Name: @Model.Name" class="textBox" />
+                @{
+                    var count = @Model.Description.Length;
+                    string size = double.Floor(count / 2.5) + "px";
+
+                    <textarea readonly="readonly" placeholder="@Model.Description" class="textArea" style="height:@size;"></textarea>
+                }
+                <input readonly="readonly" type="number" placeholder="Quantity: @Model.Quantity" class="textBox" />
+                <input readonly="readonly" type="number" placeholder="Price: @Model.Price €" class="textBox" />
+                <br />
+                <hr class="gray-hr">
+                <br />
+            </div>
+        }
+        else
+        {
+            <p>This item doesn't exist.</p>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

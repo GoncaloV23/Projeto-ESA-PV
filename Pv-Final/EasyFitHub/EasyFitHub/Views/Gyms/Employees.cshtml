@@ -1,0 +1,74 @@
+@model EasyFitHub.Models.Gym.Gym
+@{
+    ViewData["Title"] = "Index";
+}
+@*
+    Author:André P.
+    View destinada à visualização de Employees de um ginásio
+*@
+<head>
+    <link rel="stylesheet" href="~/css/Employees.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Gyms", new {gymId = Model.Id})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Gym Employees</p>
+    </div>
+}
+
+<body>
+    <div class="content">
+        <h1>@(Model.Name + " Employees")</h1>
+        @if(Model.GymEmployees != null )
+        {
+            <table>
+                <tbody>
+                    @foreach (var employee in Model.GymEmployees)
+                    {
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <div class="user-image">
+                                        @if (employee.Client.Data.Image != null)
+                                        {
+                                            <img src="@employee.Client.Data.Image.Path" />
+                                        }
+                                        else
+                                        {
+                                            <img src="/lib/imagens/DefaultProfile.png" />
+                                        }
+                                    </div>
+                                    <div class="user-name">
+                                        <h2>@(employee.Client.User.Name + " " + employee.Client.User.Surname)</h2>
+                                    </div>
+                                    <div class="user-email">
+                                        <h2>@(employee.Client.User.Email)</h2>
+                                    </div>
+                                    <div class="user-birthdate">
+                                        <h2>@(employee.Client.User.BirthDate)</h2>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No Employees found.</p>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

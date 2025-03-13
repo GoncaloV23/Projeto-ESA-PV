@@ -1,0 +1,210 @@
+@model EasyFitHub.Models.Profile.Client
+@*
+    Author: Francisco Silva
+    View destinada à edição do perfil de um cliente
+*@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="~/css/ImagePicker.css" />
+    <link rel="stylesheet" href="~/css/BiometricSettings.css" />
+    <script src="~/js/Profile.js"></script>
+    <script src="~/js/ImagePicker.js"></script>
+</head>
+
+@{
+    ViewData["Title"] = "ProfileEdit";
+}
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Profile", new { userId = Model.UserId})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="profile">ProfileSettings</p>
+    </div>
+}
+
+<body>
+    <div class="sidebar">
+        <a id="profileButton" class="active">Profile Settings</a>
+        <a id="privacyButton" class="privacy">Privacy Settings</a>
+        <a id="paymentButton" class="payment" href="@Url.Action("PaymentMethodSession", "Payments", new { clientId = Model.UserId})">Payment Methods</a>
+    </div>
+    <div id="profileSection" class="corpo">
+        <h1 class="h1">Profile Settings</h1>
+        <div>
+            <div id="viewDiv" style="display:block">
+                <img id="profileImage" class="ImagePicker" alt="Profile Image" src="/lib/imagens/ProfileV2.PNG" />
+                <div style="display:inline">
+                    <div class="line2"></div>
+                    <button class="button3" id="addBtn">Change Image</button>
+                </div>
+                
+
+            </div>
+
+            <div id="formDiv" style="display:none">
+                <img id="preview" class="ImagePicker" alt="Profile Image" src="/lib/imagens/ProfileV2.PNG" />
+                <form method="post" enctype="multipart/form-data" method="post" action="@Url.Action("UploadFile", "Profile")">
+                    <br />
+                    <div class="profile-section2">
+                        <label for="fileInput" class="fileInputBtn">
+                            Pick File
+                        </label>
+                        <input type="file" name="file" id="fileInput" accept="image/*" onchange="previewImage(event)" />
+                    </div>
+                    <br />
+                    <br />
+                    <div class="line2"></div>
+                    <button class="button3" type="submit">Apply</button>
+                    <div class="line2"></div>
+                    <button class="button3" type="button" id="cancelBtn">Cancel</button>
+                </form>
+            </div>
+        </div>
+            
+
+        @using (Html.BeginForm("UpdateClient", "Profile", FormMethod.Post))
+        {
+            <input type="hidden" asp-for=UserId value="@Model.UserId" />
+            <input type="hidden" asp-for=ClientId value="@Model.ClientId" />
+
+
+            <br />
+            <div class="line2"></div>
+            <br />
+
+            <div class="form-group">
+                <label asp-for="User.UserName" class="control-label"></label>
+                <input asp-for="User.UserName" class="form-control" />
+                <span asp-validation-for="User.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Email" class="control-label"></label>
+                <input asp-for="User.Email" class="form-control"/>
+                <span asp-validation-for="User.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.PhoneNumber" class="control-label"></label>
+                <input asp-for="User.PhoneNumber" class="form-control" type="tel" pattern="[0-9]{9}" placeholder="Format: xxxxxxxxx" />
+                <span asp-validation-for="User.PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="line2"></div>
+            <br />
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="line2"></div>
+            <br />
+
+            <div class="form-group">
+                <label asp-for="User.Name" class="control-label"></label>
+                <input asp-for="User.Name" class="form-control"/>
+                <span asp-validation-for="User.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="User.Surname" class="control-label"></label>
+                <input asp-for="User.Surname" class="form-control"/>
+                <span asp-validation-for="User.Surname" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control"/>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="User.BirthDate" class="control-label"></label>
+                <input asp-for="User.BirthDate" class="form-control"/>
+                <span asp-validation-for="User.BirthDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+
+                <div class="line2"></div>
+                <input type="submit" value="Apply" class="button2" />
+                <div class="line3"></div>
+                <div class="profile-section3">
+                    <div class="button-container2">
+                        <button class="button3">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div id="privacySection" class="corpo" style="display: none;">
+        <h1 class="h1">Privacy Settings</h1>
+        <div class="form-group">
+            @Html.TextBox("Password", null, new { @class = "form-control", placeholder = "****word", @readonly = "readonly" })
+             @using (Html.BeginForm("ChangePassword", "Authentication", FormMethod.Get))
+            {
+                <input type="hidden" name="userId" value="@Model.UserId" />
+                <div class="button-container">
+                    <button class="buttonPrivacy">Change</button>
+                </div>
+            }
+        </div>
+        <div class="line5"></div>
+        <div class="profile-section2">
+            <div class="button-container">
+                <button class="button3">Cancel</button>
+            </div>
+        </div>
+    </div>
+             
+    @section Scripts {
+        @{
+            string? resultMessage = @TempData["ResultMessage"] as string;
+            <script>
+                const defaultSrc = "/lib/imagens/ProfileV2.PNG";
+                var image = @Html.Raw(Json.Serialize(Model.Data.Image));
+
+
+                var images = [];
+                if (image) images.push(image);
+                console.log(images);
+
+
+                const profileButton = document.getElementById("profileButton");
+                const privacyButton = document.getElementById("privacyButton");
+                const paymentButton = document.getElementById("paymentButton");
+                const profileSection = document.getElementById("profileSection");
+                const privacySection = document.getElementById("privacySection");
+                const paymentSection = document.getElementById("paymentSection");
+
+                profileButton.addEventListener("click", function () {
+                    profileButton.classList.add("active");
+                    privacyButton.classList.remove("active");
+                    paymentButton.classList.remove("active");
+                    profileSection.style.display = "block";
+                    privacySection.style.display = "none";
+                    paymentSection.style.display = "none";
+                });
+
+                privacyButton.addEventListener("click", function () {
+                    profileButton.classList.remove("active");
+                    privacyButton.classList.add("active");
+                    paymentButton.classList.remove("active");
+                    profileSection.style.display = "none";
+                    privacySection.style.display = "block";
+                    paymentSection.style.display = "none";
+                });
+
+                function actionAlert() {
+                    var message = @Html.Raw(Json.Serialize(resultMessage));
+
+                    if (message) {
+                        alert(message);
+                    }
+                }
+            </script>
+        }
+    }
+</body>

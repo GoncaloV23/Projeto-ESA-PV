@@ -1,0 +1,153 @@
+﻿@using EasyFitHub.Models.Statistics
+@model List<EasyFitHub.Models.Statistics.EmployeeStats>
+@*
+    Author:André P.
+    View destinada à visualização de estatísticas de um empregado
+*@
+@{
+    ViewData["Title"] = "Employee Statistics";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/sideBar.css" />
+    <link rel="stylesheet" href="~/css/slideShow.css" />
+    <link rel="stylesheet" href="~/css/charts.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="~/js/statisticGraphs.js"></script>
+
+
+</head>
+
+@section Header {
+    <div class="navbar2">
+        @if (Model.Count <= 0)
+        {
+            <a href="@Url.Action("Index", "Home")"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        }
+        else
+        {
+            <a href="@Url.Action("Index", "Profile", new {userId = Model.FirstOrDefault().Client.UserId})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        }
+        <p class="gymClients">Employee Statistics</p>
+    </div>
+}
+
+<body>
+    @if (Model.Count > 0)
+    {
+        <div class="sidebar">
+            <a class="active">@Model.First().Client.User.Name Statistics</a>
+            @foreach (var x in Model)
+            {
+                <a onclick='menuClick(@x.EmployeeStatsId)'>Statistics of @(DateOnly.FromDateTime(x.TheDate))</a>
+
+            }
+        </div>
+        <div class="content">
+            <div class="chart-container">
+
+                <canvas id="clientCount"></canvas>
+
+                <div class="graph">
+                    <canvas id="userSexRates"></canvas>
+                </div>
+                <div class="graph">
+                    <canvas id="userAgeRates"></canvas>
+                </div>
+
+            </div>
+            <br />
+        </div>
+    }
+    else
+    {
+        <div class="sidebar">
+            <a class="active">No Employee</a>
+        </div>
+        <div class="content">
+            <div class="chart-container">
+                <h1>There Is No Statistics</h1>
+            </div>
+            <br />
+        </div>
+    }
+</body>
+
+<script>
+    var message = @Json.Serialize(@TempData["ResultMessage"]);
+    var stats = [];
+    if (@Model.Count > 0) {
+        stats = @Json.Serialize(@Model);
+    }
+
+    function menuClick(statId) {
+        let index = stats.findIndex(e => {
+            return e.employeeStatsId == statId;
+        });
+        if (index >= 0 && index < stats.length) {
+            loadPieChartByField(
+                "userSexRates",
+                "Sex Rates",
+                "userSexRates",
+                index,
+                [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ]
+            );
+            loadPieChartByField(
+                "userAgeRates",
+                "Average Age Rates",
+                "userAgeRates",
+                0,
+                [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ]
+            );
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+
+        if (message) {
+            alert(message);
+        }
+
+
+
+        if (stats.length > 0) {
+            orderAscByDate(stats);
+            console.log(stats);
+
+            loadGraphByField("clientCount", "Number of Clients", "clientCount")
+
+            loadPieChartByField(
+                "userSexRates",
+                "Sex Rates",
+                "userSexRates",
+                0,
+                [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ]
+            );
+            loadPieChartByField(
+                "userAgeRates",
+                "Average Age Rates",
+                "userAgeRates",
+                0,
+                [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ]
+            );
+        }
+    });
+</script>

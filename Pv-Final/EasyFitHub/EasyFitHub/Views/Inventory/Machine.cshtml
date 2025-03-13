@@ -1,0 +1,104 @@
+﻿@using EasyFitHub.Models.Inventory
+@model GymMachine
+
+@{
+    ViewData["Title"] = "Machine";
+}
+@*
+    Author:André P. / Francisco Silva
+    View destinada à visuaização de uma maquina
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/ItemEdit.css" />
+    <link rel="stylesheet" href="~/css/Employees.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <script src="~/js/Items.js"></script>
+</head>
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Machines", "Inventory", new {gymId = TempData["GymId"]})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Machine</p>
+    </div>
+}
+<body>
+    <p class="title bigger">Machine</p>
+
+    <div class="content">
+        @if (Model != null)
+        {
+            @if (Model.Image != null && Model.Image.Path != null)
+            {
+                <img class="itemImage" src="@Model.Image.Path" />
+            }
+            else
+            {
+                <img class="itemImage" src="/lib/imagens/DefaultMachine.png" />
+            }
+            <hr class="gray-hr">
+            <br />
+
+            <br />
+            <div class="items">
+                <input type="hidden" name="gymId" value="@Model.GymId" />
+                <input type="hidden" name="itemId" value="@Model.MachineId" />
+                <input readonly="readonly" type="text" placeholder="Name: @Model.Name" class="textBox" />
+                @{
+                    var count = @Model.Description.Length;
+                    string size = double.Floor(count / 2.5) + "px";
+
+                    <textarea readonly="readonly" placeholder="@Model.Description" class="textArea" style="height:@size;"></textarea>
+                }
+                <input readonly="readonly" type="number" placeholder="Quantity: @Model.Quantity" class="textBox" />
+                <br />
+                <hr class="gray-hr">
+                <br />
+            </div>
+            <hr class="gray-hr">
+            <h1 class="title bigger">Exercises</h1>
+            @foreach (var exercise in Model.Exercise)
+            {
+                <tr>
+                    <td>
+                        <div class="user-info">
+                            <div class="user-image">
+                                @if (exercise.Image != null)
+                                {
+                                    <img src="@exercise.Image.Path" />
+                                }
+                                else
+                                {
+                                    <img src="/lib/imagens/SliderV3.png" />
+
+                                }
+                            </div>
+                            <div class="user-name">
+                                <h2>@(exercise.Name)</h2>
+                            </div>
+                            <div class="user-email">
+                                <h2>@(exercise.Description)</h2>
+                            </div>
+                            <div class="form2">
+                                <a href="@Url.Action("Exercise", "Inventory", new {gymId = TempData["GymId"], machineId = Model.MachineId, exerciseId = exercise.ExerciseId})"><button class="Button">View Exercise</button></a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <p>This Machine doesn't exist.</p>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

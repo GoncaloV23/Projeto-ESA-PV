@@ -1,0 +1,100 @@
+﻿@using EasyFitHub.Models.Gym
+@model EasyFitHub.Models.Gym.Gym
+
+@{
+    ViewData["Title"] = "RelationshipsEdit";
+}
+
+@*
+    Author: Gonçalo V.
+    View destinada à edição das relaçoes entre empregados e clientes
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/RelationshipsEdit.css" />
+    <script src="~/js/EditRelationship.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Gyms", new {gymId = Model.Id})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Relationship</p>
+    </div>
+}
+
+<body>
+    <br />
+    <br />
+    <br />
+
+    <form method="post" action="@Url.Action("RelationshipsGymEmployee", "Gyms")">
+        <input type="hidden" name="gymId" value="@Model.Id" />
+        <div class="form-group" id="allEmployeesDropdown">
+            <label for="allEmployees">Select Employee:</label>
+            <select class="dropdown-select" id="allEmployees" name="gymEmployeeId">
+                <option value="" disabled selected hidden>Choose an option</option>
+                @foreach (var employee in Model.GymEmployees)
+                {
+                    <option value="@employee.GymEmployeeId">@employee.Client.User.UserName</option>
+                }
+            </select>
+        </div>
+        <br />
+        <button type="submit" class="button">Apply</button>
+    </form>
+
+    <div class="client-tables">
+        <form method="post" action="@Url.Action("AddRelationship", "Gyms")" id="addClientForm">
+            <input type="hidden" name="gymId" value="@Model.Id" />
+            <input type="hidden" name="employeeAccountId" id="employeeAccountId" value="@ViewData["EmployeeAccountId"]" />
+            <div class="form-group" id="allClientsDropdown">
+                <label for="allClients">All Clients:</label><br />
+                <select class="dropdown-select" id="allClients" size="10" name="clientAccountId">
+                    @if (Model.GymClients != null)
+                    {
+                        @foreach (var c in Model.GymClients)
+                        {
+                            var client = c.Client.User;
+                            <option value="@client.AccountId">@client.Name</option>
+                            <p>@client.Name</p>
+                        }
+                    }
+                </select>
+            </div>
+            <br />
+            <button type="submit" class="button">Confirm Add</button>
+        </form>
+
+        <form method="post" action="@Url.Action("RemoveRelationship", "Gyms")" id="removeClientForm">
+            <input type="hidden" name="gymId" value="@Model.Id" />
+            <input type="hidden" name="employeeAccountId" id="employeeAccountIdToRemove" value="@ViewData["EmployeeAccountId"]" />
+            <div class="form-group" id="currentClientsDropdown">
+                <label for="currentClients">Current Clients:</label><br />
+                <select class="dropdown-select" id="currentClients" size="5" name="clientAccountId">
+                    @if (ViewData["EmployeeClients"] != null)
+                    {
+                        @foreach (var c in ViewData["EmployeeClients"] as IEnumerable<GymClient>)
+                        {
+                            var client = c.Client.User;
+                            <option value="@client.AccountId">@client.Name</option>
+                            <p>@client.Name</p>
+                        }
+                    }
+                </select>
+            </div>
+            <br />
+            <button type="submit" class="button">Confirm Remove</button>
+        </form>
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

@@ -1,0 +1,97 @@
+﻿@model EasyFitHub.Models.Gym.Gym
+
+@{
+    ViewData["Title"] = "Requests";
+}@*
+    Author: Gonçalo V.
+    View destinada à confirmação/recusação dos requests de um ginásio
+*@
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Gym.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <script src="~/js/Requests.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Gyms", new {gymId = Model.Id})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Request</p>
+    </div>
+}
+
+<body>
+    <br />
+    <br />
+    <input type="text"/>
+    <button class="search-button">Search</button>
+    <br /><br />
+    <br /><br />
+    
+    @if (Model.Requests != null)
+    {
+        <table>
+            <tbody>
+                @foreach (var request in Model.Requests)
+                {
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <div class="user-image">
+                                    @if (request.Client.Data != null && request.Client.Data.Image != null)
+                                    {
+                                        <img src="@request.Client.Data.Image.Path" />
+                                    }
+                                    else
+                                    {
+                                        <img src="/lib/imagens/DefaultProfile.png" />
+                                    }
+                                </div>
+                                <div class="user-name">
+                                    @(request.Client.User.Name + " " + request.Client.User.Surname)
+                                </div>
+                                <div class="button-container">
+                                    <form method="post" action="@Url.Action("Subscribe", "Payments")">
+                                        <input type="hidden" name="gymId" value="@Model.Id" />
+                                        <input type="hidden" name="clientId" value="@request.Client.UserId" />
+                                        <span>
+                                            <select class="dropdown-select" id="allEmployees" name="role">
+                                                <option value="" disabled selected hidden>Choose an option</option>
+                                                <option value="@EasyFitHub.Models.Gym.Role.CLIENT">Client</option>
+                                                <option value="@EasyFitHub.Models.Gym.Role.PT">Personal Treiner</option>
+                                                <option value="@EasyFitHub.Models.Gym.Role.NUTRICIONIST">Nutricionist</option>
+                                                <option value="@EasyFitHub.Models.Gym.Role.SECRETARY">Secretary</option>
+                                            </select>
+                                        </span>
+                                        <button class="orange-button accept-button" data-account-id="@request.Client.User.AccountId">Accept</button>
+                                    </form>
+                                    <form method="post" action="@Url.Action("DenySubscription", "Payments")">
+                                        <input type="hidden" name="clientId" value="@request.Client.UserId" />
+                                        <input type="hidden" name="gymId" value="@Model.Id" />
+                                        <button class="orange-button deny-button" data-account-id="@request.Client.User.AccountId">Deny</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No requests found.</p>
+    }
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}
+

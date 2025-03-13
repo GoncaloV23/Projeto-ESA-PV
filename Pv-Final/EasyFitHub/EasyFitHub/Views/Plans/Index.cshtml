@@ -1,0 +1,40 @@
+@model EasyFitHub.Models.Profile.Client
+
+@{
+    ViewData["Title"] = "Plans";
+}
+
+@*
+    Author: Francisco Silva
+    View destinada à visualização de Plans
+*@
+<head>
+    <link rel="stylesheet" href="~/css/sideBar.css" />
+    <link rel="stylesheet" href="~/css/slideShow.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Home")"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Plans</p>
+    </div>
+}
+
+<body>
+    <div class="sidebar">
+        <a class="active" href="@Url.Action("Index", "Plans")">Plans</a>
+        <a href="@Url.Action("Plans", "Plans", new { userId = Model.UserId, planType = EasyFitHub.Models.Plan.PlanType.EXERCISE })">Exercise Plan</a>
+        <a href="@Url.Action("Plans", "Plans", new { userId = Model.UserId, planType = EasyFitHub.Models.Plan.PlanType.NUTRITION })">Meal Plan</a>
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}
+

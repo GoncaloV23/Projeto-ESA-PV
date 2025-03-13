@@ -1,0 +1,82 @@
+@model EasyFitHub.Models.Gym.Gym
+@{
+    ViewData["Title"] = "Index";
+}
+@*
+    Author: Gonçalo V.
+    View destinada à edição dos Clients vinculados a um ginásio
+*@
+<head>
+    <link rel="stylesheet" href="~/css/Clients.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+</head>
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Gyms", new {gymId = Model.Id})"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Gym Clients</p>
+    </div>
+}
+
+<body>
+    <div class="content">
+        <h1>@(Model.Name + " Clients")</h1>
+        @if (Model.GymClients != null)
+        {
+            <table>
+                <tbody>
+                    @foreach (var client in Model.GymClients)
+                    {
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <div class="user-image">
+                                        @if (client.Client.Data.Image != null)
+                                        {
+                                            <img src="@client.Client.Data.Image.Path" />
+                                        }
+                                        else
+                                        {
+                                            <img src="/lib/imagens/DefaultProfile.png" />
+                                        }
+                                    </div>
+                                    <div class="user-name">
+                                        <h2>@(client.Client.User.Name + " " + client.Client.User.Surname)</h2>
+                                    </div>
+                                    <div class="user-email">
+                                        <h2>@(client.Client.User.Email)</h2>
+                                    </div>
+                                    <div class="user-birthdate">
+                                        <h2>@(client.Client.User.BirthDate)</h2>
+                                    </div>
+                                    <div class="form2">
+                                        <form method="post" action="@Url.Action("Unsubscribe", "Payments")">
+                                            <input type="hidden" name="clientId" value="@client.Client.UserId" />
+                                            <input type="hidden" name="gymId" value="@Model.Id" />
+                                            <button class="Button" id="removeBtn">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No Clients found.</p>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}
+

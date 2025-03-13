@@ -1,0 +1,93 @@
+p.solid {
+    border: 1px solid black;
+    margin-right: 30%;
+}
+
+/*LEFT SIDEBAR*/
+.sidebar {
+    margin: 1% 0 0 -28px;
+    padding: 0;
+    width: 15%;
+    background-color: #4B433C;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.5s;
+    font-family: 'Istok Web', sans-serif;
+}
+
+    .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        font-family: 'Istok Web', sans-serif;
+        color: #ffffff;
+        border-bottom: 2px solid white;
+    }
+
+    .sidebar .active {
+        background-color: #FAA75C;
+        color: #ffffff;
+        width: 100%;
+    }
+
+    .sidebar a:hover:not(.active) {
+        background-color: #F5B378;
+        color: white;
+    }
+
+div.content {
+    margin-top: 3%;
+    padding-left: 16%;
+    height: 1000px;
+}
+
+.content {
+    font-family: 'Istok Web', sans-serif;
+}
+
+.navbar2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.img2 {
+    width: 15%;
+    height: 15%;
+    margin-left: 10%;
+    margin-top: 3px;
+}
+
+.gymClients {
+    margin-left: -6%;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}

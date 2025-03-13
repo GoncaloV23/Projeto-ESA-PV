@@ -1,0 +1,221 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|c:\\users\\ruies\\documents\\programacao\\3ano\\pv\\easyfithub\\easyfithub\\easyfithub\\views\\inventory\\machineedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|solutionrelative:easyfithub\\views\\inventory\\machineedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|c:\\users\\ruies\\documents\\programacao\\3ano\\pv\\easyfithub\\easyfithub\\easyfithub\\views\\plans\\plan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|solutionrelative:easyfithub\\views\\plans\\plan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|c:\\users\\ruies\\documents\\programacao\\3ano\\pv\\easyfithub\\easyfithub\\easyfithub\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|solutionrelative:easyfithub\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|c:\\users\\ruies\\documents\\programacao\\3ano\\pv\\easyfithub\\easyfithub\\easyfithub\\views\\inventory\\machine.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|solutionrelative:easyfithub\\views\\inventory\\machine.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|c:\\users\\ruies\\documents\\programacao\\3ano\\pv\\easyfithub\\easyfithub\\easyfithub\\data\\easyfithubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|solutionrelative:easyfithub\\data\\easyfithubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|c:\\users\\ruies\\documents\\programacao\\3ano\\pv\\easyfithub\\easyfithub\\easyfithub\\wwwroot\\js\\slider.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|solutionrelative:easyfithub\\wwwroot\\js\\slider.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|c:\\users\\ruies\\documents\\programacao\\3ano\\pv\\easyfithub\\easyfithub\\easyfithub\\views\\gyms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|solutionrelative:easyfithub\\views\\gyms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|c:\\users\\ruies\\documents\\programacao\\3ano\\pv\\easyfithub\\easyfithub\\easyfithub\\views\\statistics\\clientstats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41409AC4-D30D-4952-98D3-FFD04C16D47A}|EasyFitHub\\EasyFitHub.csproj|solutionrelative:easyfithub\\views\\statistics\\clientstats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 19,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InventoryController.cs",
+              "DocumentMoniker": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Controllers\\InventoryController.cs",
+              "RelativeDocumentMoniker": "EasyFitHub\\Controllers\\InventoryController.cs",
+              "ToolTip": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Controllers\\InventoryController.cs",
+              "RelativeToolTip": "EasyFitHub\\Controllers\\InventoryController.cs",
+              "ViewState": "AQIAADkBAAAAAAAAAAAAAEMBAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T20:27:05.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Plan.cshtml",
+              "DocumentMoniker": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Plans\\Plan.cshtml",
+              "RelativeDocumentMoniker": "EasyFitHub\\Views\\Plans\\Plan.cshtml",
+              "ToolTip": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Plans\\Plan.cshtml",
+              "RelativeToolTip": "EasyFitHub\\Views\\Plans\\Plan.cshtml",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAHgAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-04T20:26:24.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MachineEdit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Inventory\\MachineEdit.cshtml",
+              "RelativeDocumentMoniker": "EasyFitHub\\Views\\Inventory\\MachineEdit.cshtml",
+              "ToolTip": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Inventory\\MachineEdit.cshtml",
+              "RelativeToolTip": "EasyFitHub\\Views\\Inventory\\MachineEdit.cshtml",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAJIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-04T20:26:07.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Machine.cshtml",
+              "DocumentMoniker": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Inventory\\Machine.cshtml",
+              "RelativeDocumentMoniker": "EasyFitHub\\Views\\Inventory\\Machine.cshtml",
+              "ToolTip": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Inventory\\Machine.cshtml",
+              "RelativeToolTip": "EasyFitHub\\Views\\Inventory\\Machine.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-04T20:25:59.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EasyFitHubContext.cs",
+              "DocumentMoniker": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Data\\EasyFitHubContext.cs",
+              "RelativeDocumentMoniker": "EasyFitHub\\Data\\EasyFitHubContext.cs",
+              "ToolTip": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Data\\EasyFitHubContext.cs",
+              "RelativeToolTip": "EasyFitHub\\Data\\EasyFitHubContext.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAADwv8QAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T20:09:29.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Slider.js",
+              "DocumentMoniker": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\Slider.js",
+              "RelativeDocumentMoniker": "EasyFitHub\\wwwroot\\js\\Slider.js",
+              "ToolTip": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\wwwroot\\js\\Slider.js",
+              "RelativeToolTip": "EasyFitHub\\wwwroot\\js\\Slider.js",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-04T19:40:41.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Gyms\\Index.cshtml",
+              "RelativeDocumentMoniker": "EasyFitHub\\Views\\Gyms\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Gyms\\Index.cshtml",
+              "RelativeToolTip": "EasyFitHub\\Views\\Gyms\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-04T19:40:14.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClientStats.cshtml",
+              "DocumentMoniker": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Statistics\\ClientStats.cshtml",
+              "RelativeDocumentMoniker": "EasyFitHub\\Views\\Statistics\\ClientStats.cshtml",
+              "ToolTip": "C:\\Users\\ruies\\Documents\\programacao\\3ano\\PV\\EasyFitHub\\EasyFitHub\\EasyFitHub\\Views\\Statistics\\ClientStats.cshtml",
+              "RelativeToolTip": "EasyFitHub\\Views\\Statistics\\ClientStats.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-04T19:03:33.529Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

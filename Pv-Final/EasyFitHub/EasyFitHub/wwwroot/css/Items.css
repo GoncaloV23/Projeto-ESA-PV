@@ -1,0 +1,197 @@
+﻿.dropdown-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .dropdown-select:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    /* arrow */
+    .dropdown-select::after {
+        content: '\25BC'; 
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .dropdown-select option {
+        background-color: #fff;
+        color: #333;
+    }
+
+        .dropdown-select option:hover {
+            background-color: #007bff; 
+            color: #fff;
+        }
+
+.side-menu {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    background-color: #4B433C;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.content {
+    margin-left: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    margin-bottom: 70px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.navbar {
+    background-repeat: no-repeat;
+    background-size: 35px 23px;
+    background-position: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar span {
+        margin-right: 20px;
+        padding-left: 50px;
+        font-family: 'Istok Web', sans-serif;
+    }
+
+    .navbar img {
+        width: 35px;
+        height: 35px;
+        margin-top: 5px;
+        margin-right: -5px;
+    }
+
+.items {
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Istok Web', sans-serif;
+    color: #fff;
+}
+
+    .checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+.button {
+    background-color: #FAA75C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    font-family: 'Istok Web', sans-serif;
+}
+
+    .button:hover {
+        background-color: #F5B378;
+    }
+
+.content {
+    font-family: 'Istok Web', sans-serif;
+}
+
+.navbar2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.img2 {
+    width: 15%;
+    height: 1%;
+    margin-left: 20%;
+    margin-top: 3px;
+    padding-left: 10%;
+}
+
+.gymClients {
+    margin-left: 20px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 1%;
+}

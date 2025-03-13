@@ -1,0 +1,96 @@
+﻿<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="~/css/MainPage.css" />
+</head>
+@*
+    Author: Francisco Silva
+    View que é a página principal do sistema
+*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Header {
+    <div class="navbar2">
+        <a>
+            <img class="img2" src="/lib/imagens/LogoPNG2.png" />
+        </a>
+        <ul class="navbar-items">
+            <li class="nav-link active"><a href="@Url.Action("Index", "Home")" tabindex="4">Home</a></li>
+            <li><a href="@Url.Action("PlatformStats", "Statistics")">Platform Statistics</a></li>
+            @if (ViewData["AccountType"] != null && ViewData["AccountType"] as EasyFitHub.Models.Account.AccountType? == EasyFitHub.Models.Account.AccountType.MANAGER)
+            {
+                <li><a href=" @Url.Action("MyGym", "Home")" tabindex="4">My Gym</a></li>
+            }
+            else
+            {
+                <li><a href="@Url.Action("GymList", "Home")" tabindex="4">Gym Explorer</a></li>
+            }
+            @if (ViewData["AccountType"] != null && ViewData["AccountType"] as EasyFitHub.Models.Account.AccountType? == EasyFitHub.Models.Account.AccountType.USER)
+            {
+                <li><a href="@Url.Action("Index", "Plans", new { userId = ViewData["AccountId"] })" tabindex="4">Plans</a></li>
+            }
+            @if (ViewData["AccountType"] != null && ViewData["AccountType"] as EasyFitHub.Models.Account.AccountType? == EasyFitHub.Models.Account.AccountType.ADMIN)
+            {
+                <li><a href=" @Url.Action("ConfirmGyms", "Gyms")" tabindex="4">Admin Hub</a></li>
+            }
+            @if (ViewData["AccountId"] != null)
+            {
+                <li><a href=" @Url.Action("Logout", "Authentication")" tabindex="4">Sign Out</a></li>
+            }
+            else
+            {
+                <li><a href=" @Url.Action("Index", "Authentication")" tabindex="4">Sign In</a></li>
+            }
+
+        </ul>
+    </div>
+    <div class="navbar3">
+        <a href="@{
+            if(ViewData["AccountId"] != null)
+            {
+                        @Url.Action("Index", "Profile", new { userId = ViewData["AccountId"] })
+;
+            }
+            else
+            {
+                        @Url.Action("Index", "Authentication")
+;
+            }
+        }">
+            <img class="img3" src="/lib/imagens/ProfileV2.PNG" />
+        </a>
+    </div>
+}
+
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome to</h1><br />
+    </div>
+    <div>
+        <img class="img1" src="/lib/imagens/LogoPNG2.png" />
+    </div>
+    <div class="text-center2">
+        <h4 class="display-5">YOU’RE THE ONLY ONE THAT CAN MAKE A</h4><br />
+        <h4 class="display-6">CHANGE</h4><br />
+    </div>
+    <div class="form-button">
+        @if (ViewData["AccountId"] == null)
+        {
+            <a href="@Url.Action("Registration", "Authentication", new { accountType = "user" })">
+                <button type="submit" class="btn btn-primary">
+                    Start Today
+                </button>
+            </a>
+        }
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

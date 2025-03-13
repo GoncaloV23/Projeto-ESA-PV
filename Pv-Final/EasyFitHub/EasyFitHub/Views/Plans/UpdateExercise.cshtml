@@ -1,0 +1,172 @@
+﻿@using EasyFitHub.Models.Inventory
+@model EasyFitHub.Models.Plan.PlanExercise
+@{
+    ViewData["Title"] = "ExerciseEdit";
+}
+@*
+    Author: André P.
+    View destinada à modificação de um exercise Plan
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/ItemEdit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="~/css/ImagePicker.css" />
+    <script src="~/js/ItemEdit.js"></script>
+</head>
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Plan", "Plans", new { userId = Model.Plan.Client.UserId, planId = Model.PlanId })"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Edit Exercise</p>
+    </div>
+}
+<body>
+    <p class="title bigger">@Model.Plan.Title  -  Exercise</p>
+    
+    <div class="content">
+        @if (Model != null)
+        {
+
+            @if (Model.GetImage() != null && Model.GetImage().Path != null)
+            {
+                <img id="preview" class="itemImage" src="@Model.GetImage().Path" />
+            }
+            else
+            {
+                <img id="preview" class="itemImage" src="/lib/imagens/SliderV1.png" />
+            }
+
+            <br />
+            @if (@Model.Exercise != null)
+            {
+                <h3 id="exerciseName">
+                    @Model.Exercise.Name
+                </h3>
+            }
+            else
+            {
+                <h3 id="exerciseName">
+                    No exercise Chosen
+                </h3>
+            }
+            <br />
+            <hr class="gray-hr">
+            <br />
+
+            <br />
+            <div class="items">
+                <form method="post" id="itemForm" action="@Url.Action("UpdateExercise", "Plans")">
+                    <input type="hidden" name="userId" value="@Model.Plan.Client.UserId" />
+                    <input asp-for="PlanId" type="hidden" value="@Model.PlanId" />
+                    <input asp-for="PlanItemId" type="hidden" value="@Model.PlanItemId"/>
+                    <input asp-for="Name" type="text" placeholder="Name: @Model.Name" class="textBox" />
+                    @{
+                        var count = @Model.Description.Length;
+                        string size = double.Floor(count / 2.5) + "px";
+
+                        <textarea asp-for="Description" placeholder="Description" class="textArea" style="height:@size;"></textarea>
+                    }
+                    <div class="form-group">
+
+                        @{
+                            var exercises = ViewData["Exercises"] as IEnumerable<Exercise>;
+                            @if (exercises != null && exercises.Count() > 0)
+                            {
+                                var id = (@Model.Exercise != null) ? Model.Exercise.ExerciseId : -1;
+                                <select asp-for="ExerciseId" id="exerciseSelector" size="5" onchange="handleExerciseSelection()">
+
+                                    @if (id != -1)
+                                    {
+                                        <option value="@id" selected="selected">@Model.Exercise!.Name</option>
+                                    }
+                                    @foreach (var e in exercises)
+                                    {
+                                        @if (id != e.ExerciseId)
+                                        {
+                                            <option value="@e.ExerciseId">@e.Name</option>
+                                        }
+                                        
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <h1>
+                                    Your Gym has no Exercises!
+                                </h1>
+                            }
+                        }
+                        
+                    </div>
+                    <br />
+                    <hr class="gray-hr">
+                    <br />
+                    <button class="button" type="submit">Apply</button>
+                </form>
+                <br />
+                <br />
+                <form method="post" id="deleteForm" action="@Url.Action("DeleteExercise", "Plans")">
+                    <input type="hidden" name="userId" value="@Model.Plan.Client.UserId" />
+                    <input type="hidden" name="exerciseId" value="@Model.PlanItemId" />
+                    <button class="button" type="submit">Delete Exercise</button>
+                </form>
+                <br />
+                <br />
+                <button class="button" onclick="cancelChanges()">Cancel</button>
+            </div>
+        }
+        else
+        {
+            <p>This item doesn't exist.</p>
+        }
+    </div>
+</body>
+
+@{
+    var exs = ViewData["Exercises"] as IEnumerable<Exercise>;
+    if (exs == null) exs = new List<Exercise>();
+    string? resultMessage = @TempData["ResultMessage"] as string;
+    <script>
+        var message = @Json.Serialize(resultMessage);
+
+        var exercises = [];
+        if (@exs.Count() > 0) {
+            exercises = @Json.Serialize(exs);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (message) {
+                alert(message);
+            }
+        });
+
+
+        console.log("AQUI");
+        function handleExerciseSelection() {
+            var selectElement = document.getElementById("exerciseSelector");
+            var previewElement = document.getElementById("preview");
+            var exerciseNameElement = document.getElementById("exerciseName");
+
+            var selectedValue = selectElement.value;
+
+            var exercise = exercises.find(elem => { return elem.exerciseId == selectedValue; });
+
+            console.log(exercise);
+
+            if (exercise) {
+                exerciseNameElement.innerHTML = exercise.name;
+                if (exercise.image && exercise.image.path) previewElement.src = exercise.image.path;
+            } else {
+                exerciseNameElement.innerHTML = "No exercise Chosen";
+            }
+
+
+        }
+    </script>
+
+}
+
+}
+
+

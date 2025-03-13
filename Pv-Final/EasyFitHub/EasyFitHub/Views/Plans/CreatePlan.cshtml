@@ -1,0 +1,94 @@
+@model EasyFitHub.Models.Plan.Plan
+@{
+    ViewData["Title"] = "CreateItem";
+}
+
+@*
+    Author: Francisco Silva
+    View destinada à criaçao Plans
+*@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/ItemEdit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="~/css/ImagePicker.css" />
+    <script src="~/js/ImagePicker.js"></script>
+    <script src="~/js/ItemEdit.js"></script>
+</head>
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Plans", "Plans", new { userId = Model.Client.UserId, planType = Model.PlanType })"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Create Plan</p>
+    </div>
+}
+<body>
+
+    <p class="title bigger">Create Plan</p>
+
+    <div class="content">
+
+        <div>
+            <div id="formDiv">
+                <div class="itemImageContainer">
+                    <img id="preview" class="itemImage" alt="Item Image" src="/lib/imagens/plan.png" />
+                </div>
+                <br />
+                <div class="button-container">
+                    <label for="fileInput" class="button2">
+                        Pick File
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <hr class="gray-hr">
+        <br />
+
+        <br />
+        <div class="items">
+            <form method="post" enctype="multipart/form-data" id="itemForm" action="@Url.Action("CreatePlan", "Plans")">
+                <input type="hidden" name="userId" value="@Model.Client.UserId" />
+                <input type="file" name="file" id="fileInput" accept="image/*" onchange="previewImage(event)" />
+                <input asp-for="PlanType" type="hidden" value="@Model.PlanType" />
+                <input asp-for="Title" type="text" placeholder="Name: " class="textBox" />
+                @{
+                    var count = @Model.Description.Length;
+                    string size = double.Floor(count / 2.5) + "px";
+
+                    <textarea asp-for="Description" placeholder="Description" class="textArea" style="height:@size;"></textarea>
+                }
+                <br />
+                <hr class="gray-hr">
+                <br />
+                <button class="button" type="submit">Apply</button>
+            </form>
+            <br />
+            <br />
+            <button class="button" onclick="cancelChanges()">Cancel</button>
+        </div>
+    </div>
+</body>
+
+
+@section Scripts {
+    @{
+        string? resultMessage = @TempData["ResultMessage"] as string;
+        <script>
+            var defaultSrc = "/lib/imagens/plan.png";
+            var images = [];
+
+            if (image) images.push(image);
+
+            function actionAlert() {
+                var message = @Html.Raw(Json.Serialize(resultMessage));
+
+                if (message) {
+                    alert(message);
+                }
+            }
+        </script>
+    }
+}

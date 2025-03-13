@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+    Author: Rui Barroso
+    Sumário:
+    View destinada para a introduçao de um metodo de pagamento para usuários
+    Utiliza Stripe e um ViewData["SessionId"] para a construçao do formulário
+*@
+@{
+    ViewData["Title"] = "PaymentMethod";
+}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="~/js/Payments.js"></script>
+</head>
+<body>
+    <div id="sessionId" data-session-id="@ViewData["SessionId"]"></div>
+    <main>
+        <h1>Payment</h1>
+
+        <p>
+            Enable more payment method types <a href="https://dashboard.stripe.com/settings/payment_methods" target="_blank">
+                in your
+                dashboard
+            </a>.
+        </p>
+
+        <form id="payment-form">
+            <div id="link-authentication-element">
+                <!-- Elements will create authentication element here -->
+            </div>
+            <div id="payment-element">
+                <!-- Elements will create form elements here -->
+            </div>
+            <button id="submit">Pay now</button>
+            <div id="error-message">
+                <!-- Display error message to your customers here -->
+            </div>
+        </form>
+    </main>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

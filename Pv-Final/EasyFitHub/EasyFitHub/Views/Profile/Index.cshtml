@@ -1,0 +1,80 @@
+﻿@model EasyFitHub.Models.Profile.Client
+@*
+    Author: Francisco Silva
+    View destinada à visualização de um Perfil de um cliente
+*@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="~/css/Profile.css" />
+    <link rel="stylesheet" href="~/css/ImagePicker.css" />
+    <script src="~/js/ImagePicker.js"></script>
+</head>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Authentication")"><img class="img2" src="/lib/imagens/Home.PNG" /></a>
+        <p class="profile">Profile</p>
+        <ul class="navbar-items">
+            <li><a href="@Url.Action("ClientStats", "Statistics", new {clientId = Model.ClientId})">Client Statistics</a></li>
+            <li><a href="@Url.Action("EmployeeStats", "Statistics", new {clientId = Model.ClientId})">EmployeeStats Statistics</a></li>
+        </ul>
+    </div>
+}
+
+<div class="profile-section">
+    <div id="viewDiv" style="display:block;margin-top:80px;margin-right:60px">
+        <img id="profileImage" class="ImagePicker" alt="Profile Image" src="/lib/imagens/ProfileV2.PNG" />
+        <br />
+    </div>
+    <div class="profile-details">
+        <p class="id"><strong>ID:</strong> @Model.UserId</p>
+        <p class="name">@Model.User.Name @Model.User.Surname</p>
+        <p>
+            @{
+                DateOnly dataDeNascimento = Model.User.BirthDate;
+                int idade = DateTime.Today.Year - dataDeNascimento.Year;
+                if (DateTime.Today.Month < dataDeNascimento.Month || (DateTime.Today.Month == dataDeNascimento.Month && DateTime.Today.Day < dataDeNascimento.Day))
+                {
+                    idade--;
+                }
+            }
+        </p>
+        <p class="age">@idade</p>
+        <p class="description">@Model.Description</p>
+    </div>
+    <div>
+        <a href="@Url.Action("ProfileEdit", "Profile", new { userId = Model.UserId})"><img class="tool-image" src="/lib/imagens/Settings.PNG" alt="Imagem da Ferramenta"></a>
+    </div>
+</div>
+<div class="profile-section2">
+    <div class="button-container">
+        <a href="@Url.Action("Biometrics", "Profile", new { userId = Model.UserId})"><button class="button">Biometry data</button></a>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        string? resultMessage = @TempData["ResultMessage"] as string;
+        <script>
+            const defaultSrc = "/lib/imagens/ProfileV2.PNG";
+            var image = @Html.Raw(Json.Serialize(Model.Data.Image));
+            var images = [];
+
+            if (image) images.push(image);
+
+            function actionAlert() {
+                var message = @Html.Raw(Json.Serialize(resultMessage));
+
+                if (message) {
+                    alert(message);
+                }
+            }
+        </script>
+    }
+}

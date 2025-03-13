@@ -1,0 +1,141 @@
+﻿@model EasyFitHub.Models.Gym.Gym
+@*
+    Author: Rui Barroso
+    View destinada á edição de ginásios 
+*@
+
+<head>
+    <link rel="stylesheet" href="~/css/sideBar.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap">
+    <link rel="stylesheet" href="~/css/ItemEdit.css" />
+    <link rel="stylesheet" href="~/css/ImagePicker.css" />
+    <script src="~/js/ImagePicker.js"></script>
+</head>
+
+@{
+    ViewBag.Title = "Gym Edit";
+}
+
+@section Header {
+    <div class="navbar2">
+        <a href="@Url.Action("Index", "Authentication")"><img class="img2" src="/lib/imagens/Arrow.PNG" /></a>
+        <p class="gymClients">Gym</p>
+    </div>
+}
+
+<body>
+    <div class="sidebar">
+        <a class="active" href="@Url.Action("Index", "Gyms")">@Model.Name</a>
+        <a href="@Url.Action("Clients", "Gyms", new {gymId = Model.Id})">Clients</a>
+        <a href="@Url.Action("Employees", "Gyms", new {gymId = Model.Id})">Employees</a>
+        <a href="@Url.Action("Relationships", "Gyms", new {gymId = Model.Id})">Relationships</a>
+        <a href="@Url.Action("Requests", "Gyms", new {gymId = Model.Id})">Requests</a>
+        <a href="@Url.Action("Items", "Inventory", new {gymId = Model.Id})">Items</a>
+        <a href="@Url.Action("Machines", "Inventory", new {gymId = Model.Id})">Machines</a>
+        <a href="@Url.Action("GymStats", "Statistics", new {gymId = Model.Id})">Gym Statistics</a>
+        @if (ViewData["accountType"] != null && ViewData["accountType"] as EasyFitHub.Models.Account.AccountType? == EasyFitHub.Models.Account.AccountType.MANAGER)
+        {
+            <a href="@Url.Action("CreateAccountLink", "Payments", new {gymId = Model.Id})">Bank Details</a>
+            <a href="@Url.Action("SubscriptionPlan", "Payments", new {gymId = Model.Id})">Subscription Plan</a>
+
+            <form method="post" action="@Url.Action("DeleteGym", "Gyms", new { gymId = Model.Id })">
+                <button type="submit" class="button" style="margin-top:30px">Delete</button>
+            </form>
+        }
+
+        <br />
+        <br />
+    </div>
+    <div class="content">
+        <h1>@Model.Name</h1>
+
+        <div>
+            <div id="viewDiv" style="display:block">
+                <div style="display:inline;position:absolute;right:15%">
+                    <button class="fileInputBtn" id="addBtn">Add</button>
+                    <form method="post" enctype="multipart/form-data" method="post" action="@Url.Action("DeleteFile", "Gyms")">
+                        <input type="hidden" name="gymId" value="@Model.Id" />
+                        <input id="removeParam" type="hidden" name="imageName" value="none" />
+                        <button class="fileInputBtn" id="removeBtn">Delete</button>
+                    </form>
+
+                </div>
+                <img id="profileImage" class="ImageGym" alt="Profile Image" src="/lib/imagens/GymDefault.jpg" />
+                <div style="display:block">
+                    <button class="fileInputBtn" id="prevBtn">Previous</button>
+                    <button class="fileInputBtn" id="nextBtn">Next</button>
+                </div>
+
+
+
+            </div>
+
+            <div id="formDiv" style="display:none">
+                <img id="preview" class="ImageGym" alt="Profile Image" src="/lib/imagens/GymDefault.jpg" />
+                <form method="post" enctype="multipart/form-data" method="post" action="@Url.Action("UploadFile", "Gyms")">
+                    <input type="hidden" name="gymId" value="@Model.Id" />
+                    <br />
+                    <div class="profile-section2">
+                        <label for="fileInput" class="fileInputBtn">
+                            Pick File
+                        </label>
+                        <input type="file" name="file" id="fileInput" accept="image/*" onchange="previewImage(event)" />
+                    </div>
+                    <br />
+                    <br />
+                    <button class="fileInputBtn" type="submit">Apply</button>
+                    <button class="fileInputBtn" type="button" id="cancelBtn">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <br />
+        <br />
+        <form method="post" action="@Url.Action("Edit", "Gyms")" id="itemForm">
+            <input asp-for="Id" type="hidden" value="@Model.Id" />
+            <input asp-for="Name" type="text" placeholder="Name" class="textBox" />
+            <br />
+            <br />
+            @{
+                var countDesc = @Model.Description.Length;
+                string sizeDesc = double.Floor(countDesc / 2.5) + "px";
+
+                <textarea asp-for="Description" placeholder="Description" class="textArea" style="height:@sizeDesc;"></textarea>
+            }
+            <br />
+            @{
+                var countLoc = @Model.Location.Length;
+                string sizeLoc = double.Floor(countLoc / 2.5) + "px";
+
+                <textarea asp-for="Location" placeholder="Location" class="textArea" style="height:@sizeLoc;"></textarea>
+            }
+            <br />
+            <button class="button" type="submit">Apply</button>
+        </form>
+        <br />
+        <hr class="gray-hr">
+        <br />
+
+        @if (Model.IsConfirmed)
+        {
+            <h1>This Gym is Confirmed!</h1>
+        }
+    </div>
+</body>
+@section Scripts {
+    @{
+        string? resultMessage = @TempData["ResultMessage"] as string;
+        <script>
+            const defaultSrc = "/lib/imagens/GymDefault.jpg";
+            var images = @Html.Raw(Json.Serialize(Model.Images.Select(i => new { Path = i.Path, Name = i.Name })));
+            if (!images) image = [];
+
+            function actionAlert() {
+                var message = @Html.Raw(Json.Serialize(resultMessage));
+
+                if (message) {
+                    alert(message);
+                }
+            }
+        </script>
+    }
+}

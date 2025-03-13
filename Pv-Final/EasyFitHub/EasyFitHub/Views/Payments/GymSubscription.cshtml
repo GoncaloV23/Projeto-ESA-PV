@@ -1,0 +1,103 @@
+﻿@model EasyFitHub.Models.Payment.PaymentDetails
+@*
+    Author: Gonçalo V.
+    View destinada à gestão de uma compra
+    O utilizador poderá fazer a compra de um carrinho, cancelar ou fazer um pedido de subscrição a de um ginásio
+    A view faz a distinção destas 3 operações através do ViewData[IsSubscribed] ou através do próprio modelo
+*@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="~/css/GymSubscription.css" />
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            @*
+                Se o utilizador for inscrito ao ginásio, poderá cancelar a sua inscrição
+            *@
+            @if (ViewData["IsSubscribed"] != null && ViewData["IsSubscribed"] as bool? == true)
+            {
+                <div class="conteudo">
+                    <h1>Cancel Subscription</h1>
+                </div>
+
+                <form method="post" action="@Url.Action("Unsubscribe", "Payments")">
+                    <div class="form-group">
+                        <input type="hidden" name="clientId" value="@Model.Buyable.ClientDebitCard.Client.UserId" />
+                        <input type="hidden" name="gymId" value="@Model.Buyable.GymBank.GymId" />
+                        <input readonly="readonly" type="text" placeholder="Gym: @Model.Buyable.GetSeller().Gym.Name" class="textBox form-control" />
+                        <input readonly="readonly" type="text" placeholder="Subscription: @Model.Buyable.GetCost()€" class="textBox form-control" />
+                        
+                    </div>
+
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+                        <a href="@Url.Action("Index", "Gyms", new {gymId = Model.Buyable.GymBank.GymId})" class="btn-primary">Cancel</a>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <div class="conteudo">
+                    <h1>Payment</h1>
+                </div>
+                @*
+                    Se o utilizador nao for inscrito, poderá fazer uma inscrição através do modelo
+
+                *@
+
+                        @if (Model.Buyable.BuyableType == EasyFitHub.Models.Payment.BuyableType.SUBSCRIPTION)
+                        {
+                            <form method="post" action="@Url.Action("RequestSubscription", "Payments")">
+                                <div class="form-group">
+                                    <input type="hidden" name="clientId" value="@Model.Buyable.GetBuyer().Client.UserId" />
+                                    <input type="hidden" name="gymId" value="@Model.Buyable.GetSeller().GymId" />
+                                    <input readonly="readonly" type="text" placeholder="Gym: @Model.Buyable.GetSeller().Gym.Name" class="textBox form-control" />
+                                    <input readonly="readonly" type="text" placeholder="Subscription: @Model.Buyable.GetCost()€" class="textBox form-control" />
+                                </div>
+                                <div class="form-button">
+                                    <button type="submit" class="btn btn-primary">Confirm</button>
+                                    <a href="@Url.Action("Index", "Home")" class="btn-primary">Cancel</a>
+                                </div>
+                            </form>
+                        }
+
+                        @*
+                        O Utilizador tambem poderá fazer uma compra de carrinho
+
+                        *@
+                        else if (Model.Buyable.BuyableType == EasyFitHub.Models.Payment.BuyableType.CART)
+                        {
+                        <form method="post" action="@Url.Action("Payment", "Payments")">
+                            <div class="form-group">
+                            <input type="hidden" name="detailsId" value="@Model.PaymentDetailsId" />
+                                <input readonly="readonly" type="text" placeholder="Gym: @Model.Buyable.GetSeller().Gym.Name" class="textBox form-control" />
+                                <input readonly="readonly" type="text" placeholder="Shop Items: @Model.Buyable.GetCost()€" class="textBox form-control" />
+                                <br />
+                                @{
+                                    var cart = (EasyFitHub.Models.Payment.Cart)Model.Buyable;
+                                    <h4>Purchasing @cart.Items.Count items</h4>
+                                }
+                            </div>
+
+                            <div class="form-button">
+                                <button type="submit" class="btn btn-primary">Confirm</button>
+                                <a href="@Url.Action("Index", "Home")" class="btn-primary">Cancel</a>
+                            </div>
+                        </form>
+                        }
+            }
+            
+        </div>
+    </div>
+</body>
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}

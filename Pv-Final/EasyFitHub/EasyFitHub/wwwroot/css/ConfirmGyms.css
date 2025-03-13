@@ -1,0 +1,83 @@
+﻿.navbar {
+    background-image: url(/lib/imagens/Arrow.png);
+    background-repeat: no-repeat;
+    background-size: 35px 23px;
+    background-position: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar span {
+        margin-right: 20px;
+        padding-left: 50px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .navbar img {
+        width: 35px;
+        height: 35px;
+        margin-top: 5px;
+        margin-right: -5px;
+    }
+
+td {
+    vertical-align: middle;
+    border-bottom: 1px solid black;
+    width: auto;
+}
+
+
+table {
+    width: 100%;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-right: 40px;
+}
+
+.gym-info {
+    display: flex;
+    align-items: center;
+}
+
+.gym-name {
+    margin-left: 10px;
+}
+
+.text {
+    font-family: 'Istok Web', sans-serif;
+    color: #000000;
+    font-size: 110%;
+    font-weight: 1000;
+}
+
+.button {
+    background-color: #FAA75C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    margin-right: 10px; 
+}
+
+    .button:hover {
+        background-color: #333;
+    }
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 60%
+}
+
+

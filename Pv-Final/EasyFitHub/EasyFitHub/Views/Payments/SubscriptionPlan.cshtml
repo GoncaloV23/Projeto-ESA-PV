@@ -1,0 +1,113 @@
+﻿@using EasyFitHub.Models.Payment
+@model BankAccount
+@*
+    Author: Rui Barroso
+    View destinada a visualizaçao, criaçao e atualizaçao de Subcrições de ginásios
+*@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-inter@4">
+    <link rel="stylesheet" href="~/css/LoginStyle.css" />
+</head>
+
+@{
+    ViewBag.Title = "SubscriptionPlan";
+}
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="conteudo">
+                <h1>Subscription Plan</h1>
+                <h4>Set Up Youl Plan</h4>
+            </div>
+            @*
+                Se o ginásio não possui um plano de subscriçoes podera criar um
+            *@
+            @if (string.IsNullOrEmpty(Model.StripePlanId))
+            {
+                @using (Html.BeginForm("CreatePlan", "Payments", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.Hidden("BankAccountId", Model.BankAccountId)
+                    @Html.Hidden("GymId", Model.GymId)
+                    @Html.Hidden("StripeBankId", Model.StripeBankId)
+                    <div class="form-group">
+                        @Html.TextBox("GymSubscriptionName", Model.GymSubscriptionName, new { @class = "form-control", placeholder = "Plan Name" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextBox("GymSubscriptionPrice", Model.GymSubscriptionPrice, new { @class = "form-control", placeholder = "Plan Price" })
+                    </div>
+
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                }
+            }
+            @*
+                Se o ginásio possui um plano de subscriçoes poderá modificalo
+            *@
+            else
+            {
+                @using (Html.BeginForm("UpdatePlan", "Payments", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.Hidden("BankAccountId", Model.BankAccountId)
+                    @Html.Hidden("GymId", Model.GymId)
+                    @Html.Hidden("StripeBankId", Model.StripeBankId)
+                    @Html.Hidden("StripePlanId", Model.StripePlanId)
+
+                    <div class="form-group">
+                        @Html.TextBox("GymSubscriptionName", Model.GymSubscriptionName, new { @class = "form-control", placeholder = "Plan Name" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextBox("GymSubscriptionPrice", Model.GymSubscriptionPrice, new { @class = "form-control", placeholder = "Plan Price" })
+                    </div>
+
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                }
+            }
+
+            
+
+            <div class="form-button">
+                <a href="@Url.Action("Index", "Gyms", new {gymId = Model.GymId})" tabindex="4">Return to Gym!</a><br />
+            </div>
+        </div>
+    </div>
+    @if (TempData["ResultMessage"] != null)
+    {
+        <script>
+            alert('@TempData["ResultMessage"]');
+        </script>
+    }
+</body>
+
+@* Include YAML messages *@
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script>
+        var messagesYAML = `
+                            en:
+                                required: "The {0} field is required."
+                            pt:
+                                required: "O campo {0} é obrigatório."
+                        `;
+        var messages = jsyaml.load(messagesYAML);
+        $.validator.messages = messages['@Html.Raw(System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.ToLower())'];
+    </script>
+}
+
+@if (TempData["ResultMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert('@TempData["ResultMessage"]');
+        };
+    </script>
+}
